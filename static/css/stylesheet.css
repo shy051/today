@@ -1,0 +1,15 @@
+body{
+	/*background-color: #C4C4C4;*/
+	background-color: #eeeeee;
+	/*background-color: #0E426C;*/
+}
+
+.blue_text{
+	color: #0E426C;
+	/*color: white;*/
+	font-family: "Oswald", sans-serif;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #5F021F;
+}
