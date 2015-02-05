@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>today</title>
+
+    <!-- Slidebars CSS -->
+    <link rel="stylesheet" href="css/slidebars.min.css">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -24,37 +27,58 @@
 </head>
 
 <body>
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-left">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="back_button">Back</span>
-                </ul>
-                <ul class="nav nav-pills pull-right">
-                    <span aria-hidden="true"></span>
-                </ul>
-            </nav>
-            <center>
-                <h1 class="blue_text">today</h1>
+    <div ="sb-site">
+        <div class="container">
+            <div class="header">
+                <nav>
+                    <ul class="nav nav-pills pull-left">
+                        <li role="presentation" class="active" id="back_button"><a href="index.html"><</a></li>
+                    </ul>
+                    <ul class="nav nav-pills pull-right">
+                        <li class="sb-toggle-right" role="presentation"><a href="#">=</a></li>
+                    </ul>
+                </nav>
+                <center>
+                    <h1 class="blue_text">today</h1>
+                </center>
+            </div>
+            <center class="story">
+                <h3>Tell me a story</h3>
+                <textarea class="form-control" rows="3" id="text_box" placeholder="Write your caption and text here">
+                </textarea>
+                <form class ="file_input">
+                  <div class="form-group">
+                    <label for="exampleInputFile">Upload photo or video</label>
+                    <input type="file" id="exampleInputFile">
+                    
+                  </div>
+                  <button type="submit" class="btn btn-default">Publish</button>
+                </form>
             </center>
+        <!--container-->
         </div>
-        <center class="story">
-            <h3>Tell me a story</h3>
-            <textarea class="form-control" rows="3" id="text_box" placeholder="Write your caption and text here">
-            </textarea>
-            <form class ="file_input">
-              <div class="form-group">
-                <label for="exampleInputFile">Upload photo or video</label>
-                <input type="file" id="exampleInputFile">
-                
-              </div>
-              <button type="submit" class="btn btn-default">Publish</button>
-            </form>
-        </center>
+    <!--sb-site-->
+    </div>
+
+    <div class="sb-slidebar sb-right sb-style-push">
+        <!-- Your right Slidebar content. -->
+        <p>yay</p>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+     <!-- Slidebars -->
+    <script src="js/slidebars.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $.slidebars();
+            });
+        }) (jQuery);
+    </script>
 </body>
 
 </html>
