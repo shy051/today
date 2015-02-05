@@ -13,3 +13,22 @@ body, #sb-site{
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background-color: #5F021F;
 }
+
+#text_box{
+	width: 50%;
+	height: 400px;
+	margin-top: 20px;
+}
+
+.story{
+	color:white;
+
+}
+
+.file_input{
+	margin-top: 30px;
+}
+
+#today_logo{
+	
+}
