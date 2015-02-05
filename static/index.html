@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>today</title>
+
+    <!-- Slidebars CSS -->
+    <link rel="stylesheet" href="css/slidebars.min.css">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -24,86 +27,102 @@
 </head>
 
 <body>
-    <div class="container">
-        <!--<div class="page-header">
-          <center><h1>today</h1></center>
-        </div>-->
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-left">
-                    <li role="presentation"><a href="#">=</a></li>
-                </ul>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="add_story.html">+</a></li>
-                </ul>
-            </nav>
-            <center>
-                <h1 class="blue_text">today</h1>
-            </center>
-        </div>
-
-        <center>
-            <p class="blue_text">
-                <font size=7>It's January 20th 2015</font><br>
-                <font size=3>See what's happening around the world</font>
-            </p>
-        </center>
-
-        <!-- Youtube video -->
-        <center><iframe width="672" height="378" src="https://www.youtube.com/embed/wTcNtgA6gHs" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
-        <div><h3 class ="blue_text">Featured Stories</h3></div>
-        <div class="col-md-12">
-            <div class="well">
-                <div id="myCarousel" class="carousel slide">
-                    
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_2.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_3.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_4.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <!--/row-->
-                        </div>
-                        <!--/item-->
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_2.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_3.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                                <div class="col-sm-3"><a href="#x"><img src="img/c_4.jpg" alt="Image" class="img-responsive"></a>
-                                </div>
-                            </div>
-                            <!--/row-->
-                        </div>
-                        <!--/item-->
-                    </div>
-                    <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-                </div>
-                <!--/myCarousel-->
+    <div id="sb-site">
+        <div class="container">
+            <!--<div class="page-header">
+              <center><h1>today</h1></center>
+            </div>-->
+            <div class="header">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li class="sb-toggle-right" role="presentation"><a href="#">=</a></li>
+                    </ul>
+                    <ul class="nav nav-pills pull-left">
+                        <li role="presentation" class="active"><a href="add_story.html">+</a></li>
+                    </ul>
+                </nav>
+                <center>
+                    <h1 class="blue_text">today</h1>
+                </center>
             </div>
-            <!--/well-->
-        </div>
 
+            <center>
+                <p class="blue_text">
+                    <font size=7>It's January 20th 2015</font><br>
+                    <font size=3>See what's happening around the world</font>
+                </p>
+            </center>
+
+            <!-- Youtube video -->
+            <center><iframe width="672" height="378" src="https://www.youtube.com/embed/wTcNtgA6gHs" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
+            <div><h3 class ="blue_text">Featured Stories</h3></div>
+            <div class="col-md-12">
+                <div class="well">
+                    <div id="myCarousel" class="carousel slide">
+                        
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_2.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_3.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_4.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_2.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_3.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                    <div class="col-sm-3"><a href="#x"><img src="img/c_4.jpg" alt="Image" class="img-responsive"></a>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                            </div>
+                            <!--/item-->
+                        </div>
+                        <!--/carousel-inner--> <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                    </div>
+                    <!--/myCarousel-->
+                </div>
+                <!--/well-->
+            </div>
+
+        </div>
     </div>
     
 
+    <div class="sb-slidebar sb-right sb-style-push">
+        <!-- Your right Slidebar content. -->
+        <p>yay</p>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Slidebars -->
+    <script src="js/slidebars.js"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $.slidebars();
+            });
+        }) (jQuery);
+    </script>
 </body>
 
 </html>

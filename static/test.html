@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Slidebars Basic Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Slidebars CSS -->
+    <link rel="stylesheet" href="css/slidebars.min.css">
+
+  </head>
+
+
+  <body>
+<!-- Navbar -->
+    <div id="sb-site">
+      <!-- Your main site content here. -->
+      <p class="sb-toggle-right">Toggle right Slidebar</p>
+    </div>
+
+    <div class="sb-slidebar sb-right sb-style-push">
+      <!-- Your right Slidebar content. -->
+      <p>Just a line of text to demonstrate the overlay effect.</p>
+    </div>
+
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Slidebars -->
+    <script src="js/slidebars.min.js"></script>
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          $.slidebars();
+        });
+      }) (jQuery);
+    </script>
+  </body>
+</html>
