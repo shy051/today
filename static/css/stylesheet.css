@@ -1,12 +1,12 @@
 body{
 	/*background-color: #C4C4C4;*/
-	background-color: #eeeeee;
-	/*background-color: #0E426C;*/
+	/*background-color: #eeeeee;*/
+	background-color: #0E426C;
 }
 
 .blue_text{
-	color: #0E426C;
-	/*color: white;*/
+	/*color: #0E426C;*/
+	color: white;
 	font-family: "Oswald", sans-serif;
 }
 
