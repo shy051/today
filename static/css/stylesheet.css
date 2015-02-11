@@ -1,18 +1,53 @@
 body, #sb-site{
-	/*background-color: #C4C4C4;*/
+	background-color: #C4C4C4;
+	/*background-color: #5F021F;*/
 	/*background-color: #eeeeee;*/
-	background-color: #0E426C;
+	/*background-color: #0E426C;*/
 }
 
-.blue_text{
-	/*color: #0E426C;*/
+nav{
+	max-width: 730px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.glyphicon.glyphicon-menu-hamburger{
+	margin-top: 20px;
 	color: white;
+}
+
+.glyphicon.glyphicon-plus{
+	margin-top: 20px;
+	color: white;
+}
+.navbar.navbar-fixed-top{
+	background-color: #5F021F;
+	color:white;
 	font-family: "Oswald", sans-serif;
 }
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+
+.body_container{
+	margin-top: 100px;
+	/*width: 1170px;*/
+	max-width: 730px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.intro_text{
+	/*color: #5F021F;*/
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+}
+
+.nav>li>a:focus, .nav>li>a:hover, .nav-pills>li.active>a, .nav-pills>li.active>a:hover{
 	background-color: #5F021F;
 }
+
 
 #text_box{
 	width: 50%;
