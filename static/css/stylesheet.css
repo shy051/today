@@ -29,6 +29,28 @@ nav{
 }
 
 
+.outbox{
+	background-color:white;
+	margin-top: 200px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	height: 300px;
+	max-width: 670px;
+	position: relative;
+	overflow-y: scroll; 
+}
+
+.boxim{
+	float: left;
+}
+
+.boxtext{
+	float: right;
+}
+
 .body_container{
 	margin-top: 100px;
 	/*width: 1170px;*/
