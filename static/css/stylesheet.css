@@ -51,15 +51,16 @@ nav{
 
 .postbox{
 	background-color:white;
-	margin-top: 200px;
+	margin-top: 50px;
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
 
-	height: 1000px;
+	height: 700px;
 	max-width: 670px;
 	position: relative;
+	border: 4px solid #5F021F;
 }
 
 .boxim{
@@ -70,24 +71,47 @@ nav{
 	float: right;
 }
 
-#time_stamp{
-	float: right;
+#postprofilepic{
+	border-radius: 50%;
 }
 
 #postpic{
-	width: 500px;
+
+	width: 640px;
 	height: 400px;
-	position: center;
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 30px;
 }
 
 .post_data{
-	width: 600px;
-	height: 200px;
+	width: 640px;
+	height: 50px;
+	padding-top: 50px;
 }
 
+.likebox{
+	width: 100px;
+	margin-top: 30px;
+}
 
+.bio{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	width: 300px;
+	float: right;
+}
+
+#profile_name{
+	margin-bottom: -50px;
+}
+
+.profilebox{
+	margin-top: 60px;
+	height: 500px;
+
+	/*border: 2px solid #0E426C;*/
+}
 
 .body_container{
 	margin-top: 100px;
