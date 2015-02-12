@@ -54,65 +54,42 @@
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>It's January 20th 2015</font><br>
-                    <font size=3>See what's happening around the world</font>
+                    <font size=6>See what's trending around the world!</font>
                 </p>
             </center>
 
-            <!-- Youtube video -->
-            <center><iframe width="672" height="378" src="https://www.youtube.com/embed/wTcNtgA6gHs" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
-            <div><h3 class ="feature_text">Featured Stories</h3></div>
-
-
-
-            <div class="outbox">
-                <div class="boxim">
-                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
+            
+            <div class="postbox">
+                <div class="post_data">
+                    <div class="col-sm-3" >
+                        <img src="img/c_1.jpg" alt="Image" class="img-responsive">
                     </div>
+                    <p id="time_stamp">Date stamp</p>
                 </div>
-                <div class="boxtext">test2</div>
-                                <div class="boxim">
-                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                    </div>
-                </div>
-                <div class="boxtext">test2</div>
-                                <div class="boxim">
-                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                    </div>
-                </div>
-                <div class="boxtext">test2</div>
-                                <div class="boxim">
-                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                    </div>
-                </div>
-                <div class="boxtext">test2</div>
-                                <div class="boxim">
-                    <div class="col-sm-3"><a href="#x"><img src="img/c_1.jpg" alt="Image" class="img-responsive"></a>
-                    </div>
-                </div>
-                <div class="boxtext">test2</div>
-            </div>
-
+                <img src="img/c_1.jpg" alt="Image" class="img-responsive" id="postpic">
+                <p>Likes</p>
+                <p>CAPTION</p>
+                
+            </div>              
+        
         </div>
+
     </div>
     
 
     <div class="sb-slidebar sb-right sb-style-push">
         <nav>
             <ul class="sb-menu">
-                <li class="sb-close"><a href="profile.html">
+                <li class="sb-close"><a href="index.html">
                     <h2>Steve Yoo</h2>
                     <img src="img/me.jpg" style="float:left" width="100" />
                     <p>10 stories</p>
                     <p>572 points</p>
                 </a>
                 <li class="sb-close"><a href="index.html">Home</a></li>
-                <li class="sb-close"><a href="top_story.html">Top Stories</a></li>
-                <li class="sb-close"><a href="index.html">Most Recent</a></li>
-        
+                <li class="sb-close"><a href="index.html">Newsfeed</a></li>
                 <li class="sb-close"><a href="index.html">Past Stories</a></li>
                 <li class="sb-close"><a href="index.html">FAQ</a></li>
-                <li class="sb-close"><a href="index.html">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -128,6 +105,7 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
+                var imagePath = $('#input_id').val()
             });
         }) (jQuery);
     </script>
