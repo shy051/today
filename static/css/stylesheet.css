@@ -15,12 +15,7 @@ nav{
 	margin-left: auto;
 }
 
-.glyphicon.glyphicon-menu-hamburger{
-	margin-top: 20px;
-	color: white;
-}
-
-.glyphicon.glyphicon-plus{
+.glyphicon.glyphicon-plus, .glyphicon.glyphicon-menu-hamburger, .glyphicon.glyphicon-chevron-left {
 	margin-top: 20px;
 	color: white;
 }
@@ -34,7 +29,29 @@ nav{
 	background-color: #5F021F;
 }
 
-/*vertical story gallery*/
+/* homepage */
+.body_container{
+	margin-top: 100px;
+	/*width: 1170px;*/
+	max-width: 730px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.intro_text{
+	/*color: #5F021F;*/
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+}
+
+.feature_text{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	margin-left: 20px;
+}
+
+/* vertical story gallery */
 .outbox{
 	background-color:white;
 	padding-right: 15px;
@@ -49,6 +66,27 @@ nav{
 	overflow-y: scroll; 
 }
 
+.boxim{
+	float: left;
+	width: 100px;
+	height: 100px;
+	padding-top: 20px;
+}
+
+.boxtext{
+	position: center;
+	padding-top: 20px;
+}
+
+.gallery_row{
+	height: 150px;
+}
+
+.featurette-divider{
+	border: 1px solid #5F021F;
+}
+
+/* story already published */
 .postbox{
 	background-color:white;
 	margin-top: 50px;
@@ -63,13 +101,6 @@ nav{
 	border: 4px solid #5F021F;
 }
 
-.boxim{
-	float: left;
-}
-
-.boxtext{
-	float: right;
-}
 
 #postprofilepic{
 	border-radius: 50%;
@@ -95,6 +126,8 @@ nav{
 	margin-top: 30px;
 }
 
+/* profile */
+
 .bio{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
@@ -113,44 +146,16 @@ nav{
 	/*border: 2px solid #0E426C;*/
 }
 
-.body_container{
-	margin-top: 100px;
-	/*width: 1170px;*/
-	max-width: 730px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.intro_text{
-	/*color: #5F021F;*/
-	color: #0E426C;
-	font-family: "Oswald", sans-serif;
-}
-
-.feature_text{
-	color: #0E426C;
-	font-family: "Oswald", sans-serif;
-	margin-left: 20px;
-}
-
+/* add a story */
 #text_box{
-	width: 50%;
-	height: 400px;
+	width: 400px;
+	height: 200px;
 	margin-top: 20px;
 }
 
-.story{
-	color:white;
-
-}
 
 .file_input{
 	margin-top: 30px;
-}
-
-#back_button{
-	color: white;
 }
 
 
