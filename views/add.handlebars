@@ -46,52 +46,39 @@
     </div>
     <div id="sb-site">
 
-        <!--
-        <div class="body_container" action="most_recent.html" method="POST">
-            <center class="intro_text">
-                <h3>Tell me a story</h3>
-                <textarea class="form-control" rows="3" id="text_box" placeholder="Write your caption and text here">
-                </textarea>
-                <form class ="file_input">
-                  <div class="form-group">
-                    <label for="exampleInputFile">Upload photo or video</label>
-
-                    <input type="file" accept="images, video" capture="camcorder">
-                    
-                  </div>
-                  <button type="submit" class="btn btn-default">Publish</button>
-                </form>
-            </center>
-        </div>
-        -->
-    <!--sb-site-->
-
         <div class="body_container">
-            <center><h3>Tell me a story</h3></center>
+            <center>
+                <p class="intro_text">
+                    <font size=7>Most Recent</font><br>
+                    <font size=3>See what's trending around the world</font>
+                </p>
+            </center>
 
-            <form id="addPostForm" role="form" method="get" action="/add">
-                <div class="form-group">
-                    <label for="description">In your own words...</label>
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="description"></textarea>
+            {{#each posts}}
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>{{name}}</h5></div>
+                    </div>
+                    <div style="float:right">
+                        <p>{{date}}</p>
+                        <p>{{location}}</p>
+                    </div>
                 </div>
-
-                <div class="form-group">
-                  <label for="description">Where did this happen?</label>
-                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleInputFile">Upload photo or video</label>
-
-                    <input type="file" accept="images, video" capture="camcorder" name="media">
-                    
-                </div>
-
-
-                <input type="submit" id="submitBtn" class="btn btn-default" value="Publish"></input>
-            </form>
+                <img src="{{imgURL}}" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">{{likes}} Likes</p>
+                </div><br>
+                <font size=4><p>{{description}}</p></font>
+            </div>
+            {{/each}}
+        
         </div>
+
     </div>
+    
 
     <div class="sb-slidebar sb-right sb-style-push">
         <nav>
@@ -104,11 +91,11 @@
                 </a>
                 <li class="sb-close"><a href="/">Home</a></li>
                 <li class="sb-close"><a href="top_story.html">Top Stories</a></li>
-                <li class="sb-close"><a href="most_recent">Most Recent</a></li>
+                <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
         
-                <li class="sb-close"><a href="index.html">Past Stories</a></li>
-                <li class="sb-close"><a href="index.html">FAQ</a></li>
-                <li class="sb-close"><a href="index.html">Logout</a></li>
+                <li class="sb-close"><a href="/">Past Stories</a></li>
+                <li class="sb-close"><a href="/">FAQ</a></li>
+                <li class="sb-close"><a href="/">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -118,7 +105,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-     <!-- Slidebars -->
+    <!-- Slidebars -->
     <script src="js/slidebars.js"></script>
     <script>
         (function($) {
