@@ -8,7 +8,7 @@ exports.addPost = function(req, res) { 
 		"pImgUrl": "img/me.jpg",
 		"date": "February 13, 2015",
 		"location": req.query.location,
-		"imgURL": "",
+		"imgURL": "img/c_4.jpg",
 		"likes": "0",
 		"description":req.query.description
 	};

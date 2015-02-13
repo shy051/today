@@ -44,89 +44,39 @@
             <h1 >today</h1>
         </center>
     </div>
-
     <div id="sb-site">
-  
-            <!--<div class="page-header">
-              <center><h1>today</h1></center>
-            </div>-->
+
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>It's January 20th 2015</font><br>
-                    <font size=3>See what's happening around the world</font>
+                    <font size=7>Past Stories</font><br>
+                    <font size=3>See what's trending around the world</font>
                 </p>
             </center>
 
-            <!-- Youtube video -->
-            <center><iframe width="672" height="378" src="https://www.youtube.com/embed/wTcNtgA6gHs" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
-            <div><h3 class ="feature_text">Featured Stories</h3></div>
-
-
-
-            <div class="outbox">
-                
-                <div class="gallery_row">
-                    <div class="boxim">
-                        <img src="img/c_1.jpg" alt="Image" class="img-responsive">
+            {{#each pastPosts}}
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>{{name}}</h5></div>
                     </div>
-                    <div class="boxtext">
-                        <center>
-                            <a href="story_1.html"><h5>A jump from Mars</h5></a>
-                            <p>Bob took the best trip of his lifetime. On Tuesday, he took the plunge and jumped off of Mars. The trip down to Earth took over 8 weeks.</p>
-                        </center>
+                    <div style="float:right">
+                        <p>{{date}}</p>
+                        <p>{{location}}</p>
                     </div>
-                
-                    <hr class="featurette-divider">
                 </div>
- 
-                 <div class="gallery_row">
-                    <a href="story_1.html">
-                    <div class="boxim">
-                        <img src="img/c_2.jpg" alt="Image" class="img-responsive">
-                    </div>
-                    <div class="boxtext">
-                        <center>
-                            <h5>Doggy paddle</h5>
-                            <p>Milo is a cute pug who loves to swim with his owner Matthew. They enjoy every Sunday on the lake paddling in a kayak or board.</p>
-                        </center>
-                    </div>
-                    </a>
-                    <hr class="featurette-divider">
-                </div>
-
-                <div class="gallery_row">
-                    <a href="story_1.html">
-                    <div class="boxim">
-                        <img src="img/c_3.jpg" alt="Image" class="img-responsive">
-                    </div>
-                    <div class="boxtext">
-                        <center>
-                            <h5>Bear Hug or Lion Hug</h5>
-                            <p>Sarah, a UCSD PhD student, is on a research trip in Africa to study whether bears or lions give the best hugs. </p>
-                        </center>
-                    </div>
-                    </a>
-                    <hr class="featurette-divider">
-                </div>
-
-                <div class="gallery_row">
-                    <a href="story_1.html">
-                    <div class="boxim">
-                        <img src="img/c_4.jpg" alt="Image" class="img-responsive">
-                    </div>
-                    <div class="boxtext">
-                        <center>
-                            <h5>The tide is high</h5>
-                            <p>Henry has been surfing for 23 days straight because the waves in Hawaii have been perfection.</p>
-                        </center>
-                    </div>
-                    </a>
-                    <hr class="featurette-divider">
-                </div>                                                       
+                <img src="{{imgURL}}" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">{{likes}} Likes</p>
+                </div><br>
+                <font size=4><p>{{description}}</p></font>
             </div>
-
+            {{/each}}
+        
         </div>
+
     </div>
     
 
@@ -143,7 +93,7 @@
                 <li class="sb-close"><a href="/top_story">Top Stories</a></li>
                 <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
         
-                <li class="sb-close"><a href="/past_stories">Past Stories</a></li>
+                <li class="sb-close"><a href="/">Past Stories</a></li>
                 <li class="sb-close"><a href="/">FAQ</a></li>
                 <li class="sb-close"><a href="/">Logout</a></li>
             </ul>
