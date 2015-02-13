@@ -95,7 +95,7 @@ nav{
 	margin-right: auto;
 	margin-left: auto;
 
-	height: 700px;
+	height: auto;
 	max-width: 670px;
 	position: relative;
 	border: 4px solid #5F021F;
