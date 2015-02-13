@@ -47,7 +47,7 @@
                 </center>
             </div>
 
-        <div class="body_container">
+        <div class="body_container" action="most_recent.html" method="POST">
             <center class="intro_text">
                 <h3>Tell me a story</h3>
                 <textarea class="form-control" rows="3" id="text_box" placeholder="Write your caption and text here">
@@ -98,6 +98,7 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
+                var imagePath = $('#input_id').val();
             });
         }) (jQuery);
     </script>
