@@ -11,6 +11,9 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var add_story = require('./routes/add_story');
 var most_recent = require('./routes/most_recent');
+var profile = require('./routes/profile');
+var story_1 = require('./routes/story_1');
+var top_story = require('./routes/top_story');
 
 
 var add = require('./routes/add');
@@ -45,6 +48,9 @@ app.get('/', index.view);
 app.get('/add_story', add_story.view);
 app.get('/most_recent', most_recent.view);
 app.get('/add', add.addPost);
+app.get('/profile', profile.view);
+app.get('/story_1', story_1.view);
+app.get('/top_story', top_story.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -27,34 +27,29 @@
 </head>
 
 <body>
+    <div class="navbar navbar-fixed-top sb-slide" role="navigation">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li class="sb-toggle-right" role="presentation"><a href="#">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a></li>
+            </ul>
+            <ul class="nav nav-pills pull-left">
+                <li role="presentation" class="active"><a href="add_story">
+                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </a></li>
+            </ul>
+        </nav>
+        <center>
+            <h1 >today</h1>
+        </center>
+    </div>
+
     <div id="sb-site">
-  
-            <!--<div class="page-header">
-              <center><h1>today</h1></center>
-            </div>-->
-            <div class="navbar navbar-fixed-top" role="navigation">
-                <nav>
-                    <ul class="nav nav-pills pull-right">
-                        <li class="sb-toggle-right" role="presentation"><a href="#">
-                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                            </a></li>
-                    </ul>
-                    <ul class="nav nav-pills pull-left">
-                        <li role="presentation" class="active"><a href="add_story.html">
-                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                            </a></li>
-                    </ul>
-                </nav>
-                <center>
-                    <h1 >today</h1>
-                </center>
-            </div>
-
-
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>Most Recent</font><br>
+                    <font size=7>Top Stories</font><br>
                     <font size=3>See what's trending around the world</font>
                 </p>
             </center>
@@ -88,19 +83,19 @@
     <div class="sb-slidebar sb-right sb-style-push">
         <nav>
             <ul class="sb-menu">
-                <li class="sb-close"><a href="profile.html">
+                <li class="sb-close"><a href="/profile">
                     <h2>Steve Yoo</h2>
                     <img src="img/me.jpg" style="float:left" width="100" />
                     <p>10 stories</p>
                     <p>572 points</p>
                 </a>
-                <li class="sb-close"><a href="index.html">Home</a></li>
-                <li class="sb-close"><a href="top_story.html">Top Stories</a></li>
-                <li class="sb-close"><a href="most_recent.html">Most Recent</a></li>
+                <li class="sb-close"><a href="/">Home</a></li>
+                <li class="sb-close"><a href="/top_story">Top Stories</a></li>
+                <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
         
-                <li class="sb-close"><a href="index.html">Past Stories</a></li>
-                <li class="sb-close"><a href="index.html">FAQ</a></li>
-                <li class="sb-close"><a href="index.html">Logout</a></li>
+                <li class="sb-close"><a href="/">Past Stories</a></li>
+                <li class="sb-close"><a href="/">FAQ</a></li>
+                <li class="sb-close"><a href="/">Logout</a></li>
             </ul>
         </nav>
     </div>
@@ -116,7 +111,7 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
-                var imagePath = $('#input_id').val();
+                var imagePath = $('#input_id').val()
             });
         }) (jQuery);
     </script>

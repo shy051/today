@@ -44,54 +44,34 @@
             <h1 >today</h1>
         </center>
     </div>
+    
     <div id="sb-site">
-
-        <!--
-        <div class="body_container" action="most_recent.html" method="POST">
-            <center class="intro_text">
-                <h3>Tell me a story</h3>
-                <textarea class="form-control" rows="3" id="text_box" placeholder="Write your caption and text here">
-                </textarea>
-                <form class ="file_input">
-                  <div class="form-group">
-                    <label for="exampleInputFile">Upload photo or video</label>
-
-                    <input type="file" accept="images, video" capture="camcorder">
-                    
-                  </div>
-                  <button type="submit" class="btn btn-default">Publish</button>
-                </form>
-            </center>
-        </div>
-        -->
-    <!--sb-site-->
-
         <div class="body_container">
-            <center><h3>Tell me a story</h3></center>
+            <center>
+                <p class="intro_text">
+                    <font size=7>Profile</font><br>
+                </p>
+            </center>
 
-            <form id="addPostForm" role="form" method="get" action="/add">
-                <div class="form-group">
-                    <label for="description">In your own words...</label>
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="description"></textarea>
+            
+            <div class="profilebox">
+
+                <img src="img/me.jpg" style="float:left" width="300" />
+  
+                <div class="bio">
+                    <font size= 8><p id="profile_name">Steve Yoo</p><br></font>
+                    <p>10 stories</p><br>
+                    <p>572 points</p><br>
+                    <p>Hi I'm Steve. I like to collect records, and drink tea</p>
                 </div>
 
-                <div class="form-group">
-                  <label for="description">Where did this happen?</label>
-                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location">
-                </div>
-
-                <div class="form-group">
-                    <label for="exampleInputFile">Upload photo or video</label>
-
-                    <input type="file" accept="images, video" capture="camcorder" name="media">
-                    
-                </div>
+            </div>
 
 
-                <input type="submit" id="submitBtn" class="btn btn-default" value="Publish"></input>
-            </form>
+
         </div>
     </div>
+    
 
     <div class="sb-slidebar sb-right sb-style-push">
         <nav>
@@ -118,13 +98,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-     <!-- Slidebars -->
+    <!-- Slidebars -->
     <script src="js/slidebars.js"></script>
     <script>
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
-                var imagePath = $('#input_id').val();
             });
         }) (jQuery);
     </script>
