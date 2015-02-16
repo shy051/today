@@ -53,9 +53,9 @@
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>It's January 20th 2015</font><br>
-                    <font size=3>See what's happening around the world</font>
+                    It's<div id="clockbox"></div>
                 </p>
+                <p id="intro_text2">See what's happening around the world</p>
             </center>
 
             <!-- Youtube video -->
@@ -162,6 +162,21 @@
                 var imagePath = $('#input_id').val();
             });
         }) (jQuery);
+    </script>
+    <script type="text/javascript">
+        tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+
+        function GetClock(){
+            var d=new Date();
+            var nmonth=d.getMonth(),ndate=d.getDate(),nyear=d.getYear();
+            if(nyear<1000) nyear+=1900;
+                document.getElementById('clockbox').innerHTML=""+tmonth[nmonth]+" "+ndate+", "+nyear+"";
+        }
+
+        window.onload=function(){
+        GetClock();
+        setInterval(GetClock,1000);
+        }
     </script>
 </body>
 

@@ -39,10 +39,21 @@ nav{
 	margin-right: auto;
 	margin-left: auto;
 }
-.intro_text{
+.intro_text, #clockbox{
 	/*color: #5F021F;*/
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
+	display: inline-block;
+	font-size: 3em;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+#intro_text2{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	display: inline-block;
+	font-size: 1.5em;
 }
 
 .feature_text{
