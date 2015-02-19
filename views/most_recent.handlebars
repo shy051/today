@@ -68,8 +68,8 @@
                 </div>
                 <img src="{{imgURL}}" alt="Image" id="postpic">
                 <div class="likebox">
-                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    <p style="float:right">{{likes}} Likes</p>
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
+                    <p id="likes" style="display:inline">{{likes}}</p> Likes
                 </div><br>
                 <font size=4><p>{{description}}</p></font>
             </div>
@@ -109,7 +109,22 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
-                var imagePath = $('#input_id').val();
+                var likes = parseInt($("#likes").text());
+
+                $("#thumb").click(function(){
+                    $(this).toggleClass("liked");
+                    var theLike = parseInt($("#likes").text());
+
+                    if(theLike == likes){
+                        theLike++;
+                    }
+                    else{
+                        theLike--;
+                    }
+
+                    $("#likes").text(theLike);
+                });
+
             });
         }) (jQuery);
     </script>

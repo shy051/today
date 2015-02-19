@@ -83,7 +83,9 @@
                 <div class="form-group">
                     <label for="exampleInputFile">Upload photo or video</label>
 
-                    <input type="file" accept="images, video" capture="camcorder" name="media">
+                    <input type="file" id="userFile" accept="images, video" capture="camcorder" name="media">
+
+                    <img src='' id='theFile' width="200" name='thePic'/>
                     
                 </div>
 
@@ -125,6 +127,10 @@
                 var imagePath = $('#input_id').val();
             });
         }) (jQuery);
+
+        $('#userFile').change(function(event){
+            $('#theFile').attr('src',URL.createObjectURL(event.target.files[0]));
+        });
     </script>
 </body>
 
