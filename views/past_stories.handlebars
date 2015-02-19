@@ -49,31 +49,107 @@
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>Past Stories</font><br>
-                    <font size=3>See what's trending around the world</font>
+                    <font size=7>Yesterday</font><br>
+                    <font size=3>See the top stories from yesterday</font>
                 </p>
             </center>
 
-            {{#each pastPosts}}
             <div class="postbox">
                 <div class="post_data">
                     <div style="float:left">
-                        <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
-                        <div style="float:right"><h5>{{name}}</h5></div>
+                        <img src="img/kenia.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Daniel Kane</h5></div>
                     </div>
                     <div style="float:right">
-                        <p>{{date}}</p>
-                        <p>{{location}}</p>
+                        <p>Taipei, Taiwan</p>
                     </div>
                 </div>
-                <img src="{{imgURL}}" alt="Image" id="postpic">
+                <img src="img/Earthquake.jpg" alt="Image" id="postpic">
                 <div class="likebox">
                     <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    <p style="float:right">{{likes}} Likes</p>
-                </div><br>
-                <font size=4><p>{{description}}</p></font>
-            </div>
-            {{/each}}
+                    <p style="float:right">23567 Likes</p>
+                </div>
+                <font size=4><p>Earthquake of over 7.9 magnitude. Send love to Taiwan.</p></font>
+                
+            </div>  
+
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="img/kenia.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Daniel Kane</h5></div>
+                    </div>
+                    <div style="float:right">
+                        <p>Dakar, Senegal</p>
+                    </div>
+                </div>
+                <img src="img/waterAfrica.jpg" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">15349 Likes</p>
+                </div>
+                <font size=4><p>The village of Dae Youl Lee experiences filtered water for the first time!</p></font>
+                
+            </div>  
+
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="img/kenia.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Daniel Kane</h5></div>
+                    </div>
+                    <div style="float:right">
+                        <p>Beijing, China</p>
+                    </div>
+                </div>
+                <img src="img/marathon.jpg" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">12679 Likes</p>
+                </div>
+                <font size=4><p>Thank you to everyone who came out to the memorial service for Lu Lingzi.</p></font>
+                
+            </div>  
+
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="img/kenia.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Daniel Kane</h5></div>
+                    </div>
+                    <div style="float:right">
+                        <p>Washington D.C.</p>
+                    </div>
+                </div>
+                <img src="img/Obama.jpg" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">7865 Likes</p>
+                </div>
+                <font size=4><p>Sat in the Oval Office for a world leader conference today. We discussed plans about implementing "green laws" in every nation.</p></font>
+                
+            </div>  
+
+
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="img/HopeSolo.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Hope Solo</h5></div>
+                    </div>
+                    <div style="float:right">
+                      
+                        <p>Seattle, Washington</p>
+                    </div>
+                </div>
+                <img src="img/ussoccer.jpg" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                    <p style="float:right">4967 Likes</p>
+                </div>
+                <font size=4><p>Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes.</p></font>
+                
+            </div>              
         
         </div>
 
@@ -93,7 +169,7 @@
                 <li class="sb-close"><a href="/top_story">Top Stories</a></li>
                 <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
         
-                <li class="sb-close"><a href="/past_stories">Past Stories</a></li>
+                <li class="sb-close"><a href="/past_stories">Yesterday</a></li>
             </ul>
         </nav>
     </div>
