@@ -15,6 +15,7 @@ var profile = require('./routes/profile');
 var story_1 = require('./routes/story_1');
 var top_story = require('./routes/top_story');
 var past_stories = require('./routes/past_stories');
+var login = require('./routes/login');
 
 
 var add = require('./routes/add');
@@ -45,7 +46,8 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/', login.view);
+app.get('/index', index.view);
 app.get('/add_story', add_story.view);
 app.get('/most_recent', most_recent.view);
 app.get('/add', add.addPost);
