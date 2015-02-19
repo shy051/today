@@ -20,12 +20,14 @@
       body {
         padding-top: 40px;
         padding-bottom: 40px;
-        background-color: #fff;
+        background-color: #5F021F;
+        color:white;
+        font-family: "Oswald", sans-serif;
       }
 
       .form-signin {
         max-width: 330px;
-        padding: 15px;
+        padding: 40px;
         margin: 0 auto;
       }
       .form-signin .form-signin-heading,
@@ -57,31 +59,38 @@
         margin-bottom: -1px;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        color: #0E426C;
       }
       .form-signin input[type="password"] {
         margin-bottom: 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        color: #0E426C;
       }
 
       .btn {
       text-transform: uppercase;
-      font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
       font-weight: 400;
       -webkit-transition: all .3s ease-in-out;
       -moz-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out;
-      border: 1px solid #84CFCC;
+
       outline: 0;
-      color: #000;
-      background-color: transparent;
+      background-color: #0E426C;
+      color:white;
+      font-family: "Oswald", sans-serif;
 }
 
-      .btn:hover, .btn:focus{
-        border: 1px solid #84CFCC;
-        outline: 0;
-        color: #000;
-        background-color: #84CFCC;
+      .container img, h1{
+        display: inline;
+      }
+
+      .container img{
+        padding-left: 10px;
+      }
+
+      .checkbox{
+        margin-left: -65px;
       }
 
     </style>
@@ -95,13 +104,16 @@
 
   <body>
 
+    <center>
     <div class="container">
 
+      <font size=7><h1>today</h1></font>
+      <img src="public/img/black-globe-icon.png" width="80">
       <form class="form-signin" action="./login" method="POST">
         <h1 class="form-signin-heading">Please Login</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <label for="inputEmail" class="sr-only"></label>
         <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username or Email" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
+        <label for="inputPassword" class="sr-only"></label>
         <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
@@ -112,6 +124,6 @@
       </form>
 
     </div> <!-- /container -->
-
+    </center>
   </body>
 </html>
