@@ -68,8 +68,8 @@
                 </div>
                 <img src="img/ussoccer.jpg" alt="Image" id="postpic">
                 <div class="likebox">
-                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    <p style="float:right">49678 Likes</p>
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
+                    <p id="likes" style="display:inline">49678</p> Likes
                 </div>
                 <font size=4><p>Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes.</p></font>
                 
@@ -109,7 +109,21 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
-                var imagePath = $('#input_id').val()
+                var likes = parseInt($("#likes").text());
+
+                $("#thumb").click(function(){
+                    $(this).toggleClass("liked");
+                    var theLike = parseInt($("#likes").text());
+
+                    if(theLike == likes){
+                        theLike++;
+                    }
+                    else{
+                        theLike--;
+                    }
+
+                    $("#likes").text(theLike);
+                });
             });
         }) (jQuery);
     </script>
