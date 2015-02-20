@@ -16,6 +16,7 @@ var story_1 = require('./routes/story_1');
 var top_story = require('./routes/top_story');
 var past_stories = require('./routes/past_stories');
 var login = require('./routes/login');
+var username = require('./routes/username');
 
 
 var add = require('./routes/add');
@@ -55,6 +56,7 @@ app.get('/profile', profile.view);
 app.get('/story_1', story_1.view);
 app.get('/top_story', top_story.view);
 app.get('/past_stories', past_stories.view);
+app.get('/username', username.view);
 
 // Example route
 // app.get('/users', user.list);

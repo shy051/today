@@ -13,9 +13,6 @@
     <title>Login</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
     <style>
       body {
         padding-top: 40px;
@@ -109,21 +106,52 @@
 
       <font size=7><h1>today</h1></font>
       <img src="img/black-globe-icon.png" width="80">
-      <form class="form-signin" action="/index" method="GET">
+      <form class="form-signin">
         <h1 class="form-signin-heading">Please Login</h1>
         <label for="inputEmail" class="sr-only"></label>
-        <input name="username" type="text" id="inputEmail" class="form-control" placeholder="Username or Email" required autofocus>
+        <input name="username" type="text" id="email" class="form-control" placeholder="Username or Email" required autofocus>
         <label for="inputPassword" class="sr-only"></label>
-        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn" type="submit">Login</button>
+        <button class="btn check_username" type="submit">Login</button>
       </form>
 
     </div> <!-- /container -->
     </center>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        
+        $('.check_username').click(function(){
+          var email = $('#email').val();
+          var password = $("#password").val();
+          
+          
+          $.ajax('/username', {
+            dataType: 'json',
+            success: function(results){
+              if(results.username == email && results.password == password){
+                window.location.href = "/index";
+                return true;
+              }else{
+                alert("auth failed");
+                return false;
+              }
+            }
+          });
+          
+          return false;
+        });
+      });
+    </script>
   </body>
 </html>
