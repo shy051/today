@@ -44,7 +44,7 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -53,7 +53,7 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 .feature_text{
@@ -119,8 +119,8 @@ nav{
 
 #postpic{
 
-	width: 640px;
-	height: 400px;
+	width: 280px;
+	height: auto;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 30px;
