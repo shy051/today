@@ -45,7 +45,6 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 4em;
-	font-size: 8vw;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -55,15 +54,15 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 3em;
-	font-size: 6vw;
+	margin-top: -20px;
 }
 
 @media (max-width: @screen-xs) {
-    .intro_text, #clockbox{font-size: 1em;}
+    .intro_text, #clockbox{font-size: 8.5vw;}
 }
 
 @media (max-width: @screen-sm) {
-    #intro_text2{font-size: 1em;}
+    #intro_text2{font-size: 5vw;}
 }
 
 
