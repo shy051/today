@@ -177,7 +177,10 @@ span.glyphicon.glyphicon-pencil{
 	padding: 2.5px;
 }
 
-
+.img-responsive{
+	height: 250px;
+	width: 345px;
+}
 
 /* add a story */
 #text_box{
