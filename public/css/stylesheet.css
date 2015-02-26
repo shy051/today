@@ -173,6 +173,12 @@ span.glyphicon.glyphicon-pencil{
 	/*border: 2px solid #0E426C;*/
 }
 
+.col-xs-6 {
+	padding: 2.5px;
+}
+
+
+
 /* add a story */
 #text_box{
 	width: 400px;
