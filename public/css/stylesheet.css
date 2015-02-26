@@ -44,7 +44,7 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 2em;
+	font-size: 4em;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -53,7 +53,7 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 1em;
+	font-size: 3em;
 }
 
 .feature_text{
