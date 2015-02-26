@@ -146,8 +146,24 @@ nav{
 	float: right;
 }
 
+.user-name{
+	width: 300px;
+	height: 70px;
+	display: inline-block;
+}
+
+span.glyphicon.glyphicon-pencil{
+	display: inline-block;
+	float: right;
+	font-size: 25px;
+	margin-top: -50px;
+
+}
+
 #profile_name{
 	margin-bottom: -50px;
+	display: inline-block;
+	float: left;
 }
 
 .profilebox{
