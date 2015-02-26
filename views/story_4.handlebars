@@ -27,6 +27,7 @@
 </head>
 
 <body>
+
     <div class="navbar navbar-fixed-top sb-slide" role="navigation">
         <nav>
             <ul class="nav nav-pills pull-right">
@@ -35,8 +36,8 @@
                     </a></li>
             </ul>
             <ul class="nav nav-pills pull-left">
-                <li role="presentation" class="active"><a href="add_story">
-                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <li role="presentation" class="active"><a href="/index">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     </a></li>
             </ul>
         </nav>
@@ -44,34 +45,40 @@
             <a href="/index" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
-    
+
     <div id="sb-site">
+
         <div class="body_container">
             <center>
                 <p class="intro_text">
-                    <font size=7>Profile</font><br>
+                    <font size=7>Android Robots</font><br>
+                    <font size=3>Tokyo, Japan</font>
                 </p>
             </center>
 
             
-            <div class="profilebox">
-
-                <img src="img/me.jpg" style="float:left" width="300" />
-  
-                <div class="bio">
-                    <font size= 8><p id="profile_name">Steve Yoo</p><br></font>
-                    <p>10 stories</p><br>
-                    <p>572 points</p><br>
-                    <p>Hi I'm Steve. I like to collect records, and drink tea</p>
+            <div class="postbox">
+                <div class="post_data">
+                    <div style="float:left">
+                        <img src="img/jess.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Jessica Cho</h5></div>
+                    </div>
+                    <div style="float:right">
+                        <p>Tokyo, Japan</p>
+                    </div>
                 </div>
-
-            </div>
-
-
-
+                <img src="img/android.jpg" alt="Image" id="postpic">
+                <div class="likebox">
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
+                    <p id="likes" style="display:inline">49678</p> Likes
+                </div>
+                <font size=4><p>I was able to fly to Tokyo to catch the testing of the new androids! It was cool to see the scientific advancements but also super weird to see the robots looked like people.</p></font>
+                
+            </div>              
+        
         </div>
+    <!--sb-site-->
     </div>
-    
 
     <div class="sb-slidebar sb-right sb-style-push">
         <nav>
@@ -96,7 +103,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Slidebars -->
+     <!-- Slidebars -->
     <script src="js/slidebars.js"></script>
     <script>
         (function($) {

@@ -41,7 +41,7 @@
             </ul>
         </nav>
         <center>
-            <a href="\" style="text-decoration: none; color: white;"><h1 >today</h1></a>
+            <a href="/index" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
 
@@ -68,8 +68,8 @@
                 </div>
                 <img src="img/ussoccer.jpg" alt="Image" id="postpic">
                 <div class="likebox">
-                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-                    <p style="float:right">49678 Likes</p>
+                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
+                    <p id="likes" style="display:inline">49678</p> Likes
                 </div>
                 <font size=4><p>Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes.</p></font>
                 
@@ -89,11 +89,11 @@
                     <p>10 stories</p>
                     <p>572 points</p>
                 </a>
-                <li class="sb-close"><a href="/">Home</a></li>
+                <li class="sb-close"><a href="/index">Home</a></li>
                 <li class="sb-close"><a href="/top_story">Top Stories</a></li>
                 <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
         
-                <li class="sb-close"><a href="/past_stories">Past Stories</a></li>
+                <li class="sb-close"><a href="/past_stories">Yesterday</a></li>
             </ul>
         </nav>
     </div>
@@ -109,7 +109,21 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
-                var imagePath = $('#input_id').val()
+                var likes = parseInt($("#likes").text());
+
+                $("#thumb").click(function(){
+                    $(this).toggleClass("liked");
+                    var theLike = parseInt($("#likes").text());
+
+                    if(theLike == likes){
+                        theLike++;
+                    }
+                    else{
+                        theLike--;
+                    }
+
+                    $("#likes").text(theLike);
+                });
             });
         }) (jQuery);
     </script>
