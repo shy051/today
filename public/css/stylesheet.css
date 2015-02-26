@@ -45,6 +45,7 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 3em;
+	font-size: 8.5vw;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -54,6 +55,7 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 1.5em;
+	font-size: 5vw;
 	margin-top: -15px;
 }
 
@@ -81,10 +83,9 @@ nav{
 	margin-left: auto;
 	border-radius: 10px;
 
-	height: 300px;
-	max-width: 670px;
+	height: auto;
+	width: 100%;
 	position: relative;
-	overflow-y: scroll; 
 }
 
 .boxim{
