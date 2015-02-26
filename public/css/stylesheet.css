@@ -177,8 +177,8 @@ span.glyphicon.glyphicon-pencil{
 	padding: 2.5px;
 }
 
-.img-responsive{
-	height: 250px;
+.col-xs-6 img{
+	height: 200px;
 	width: 345px;
 }
 
