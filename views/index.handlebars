@@ -28,7 +28,7 @@
 
 <body>
 
-    <div class="navbar navbar-fixed-top sb-slide" role="navigation">
+    <div class="navbar navbar-fixed-top sb-slide" id="topNav" role="navigation">
         <nav>
             <ul class="nav nav-pills pull-right">
                 <li class="sb-toggle-right" role="presentation"><a href="#">
@@ -42,7 +42,7 @@
             </ul>
         </nav>
         <center>
-            <a href="/index" style="text-decoration: none; color: white;"><h1 >today</h1></a>
+            <a href="/" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
 
@@ -60,7 +60,10 @@
             </center>
 
             <!-- Youtube video -->
-            <center><iframe width="280" height="240" src="https://www.youtube.com/embed/4oDLAEEL5Jo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
+            <div class="embed-responsive embed-responsive-16by9">
+                <center><iframe class="embed-responsive-item" width="280" height="240" src="https://www.youtube.com/embed/4oDLAEEL5Jo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen style="PADDING-TOP: 10px"></iframe></center>
+            </div>
+
             <div><h3 class ="feature_text">Featured Stories</h3></div>
 
 
@@ -142,21 +145,7 @@
     
 
     <div class="sb-slidebar sb-right sb-style-push" id="hamburger">
-<!--         <nav>
-            <ul class="sb-menu">
-                <li class="sb-close"><a href="/profile">
-                    <h2>Steve Yoo</h2>
-                    <img src="img/me.jpg" style="float:left" width="100" />
-                    <p>10 stories</p>
-                    <p>572 points</p>
-                </a>
-                <li class="sb-close"><a href="/index">Home</a></li>
-                <li class="sb-close"><a href="/top_story">Top Stories</a></li>
-                <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
-                <li class="sb-close"><a href="/past_stories">Yesterday</a></li>
-                <li class="sb-close"><a href="/logout">Logout</a></li>
-            </ul>
-        </nav> -->
+        <!-- Container for the side navigation -->
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -173,6 +162,7 @@
                 var imagePath = $('#input_id').val();
 
                 $('#hamburger').load('static/hamburger.html');
+
             });
         }) (jQuery);
     </script>

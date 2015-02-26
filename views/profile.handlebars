@@ -41,7 +41,7 @@
             </ul>
         </nav>
         <center>
-            <a href="/index" style="text-decoration: none; color: white;"><h1 >today</h1></a>
+            <a href="/" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
     
@@ -95,22 +95,7 @@
     </div>
     
 
-    <div class="sb-slidebar sb-right sb-style-push">
-        <nav>
-            <ul class="sb-menu">
-                <li class="sb-close"><a href="/profile">
-                    <h2>Steve Yoo</h2>
-                    <img src="img/me.jpg" style="float:left" width="100" />
-                    <p>10 stories</p>
-                    <p>572 points</p>
-                </a>
-                <li class="sb-close"><a href="/index">Home</a></li>
-                <li class="sb-close"><a href="/top_story">Top Stories</a></li>
-                <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
-        
-                <li class="sb-close"><a href="/past_stories">Yesterday</a></li>
-            </ul>
-        </nav>
+    <div class="sb-slidebar sb-right sb-style-push" id="hamburger">
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -124,6 +109,7 @@
         (function($) {
             $(document).ready(function() {
                 $.slidebars();
+                $('#hamburger').load('static/hamburger.html');
             });
         }) (jQuery);
     </script>
