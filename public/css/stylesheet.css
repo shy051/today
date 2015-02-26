@@ -144,8 +144,18 @@ nav{
 }
 
 .likebox{
-	width: 100px;
+	width: 200px;
 	margin-top: 30px;
+}
+
+.drop_edit_delete{
+	width: 100%;
+	height: auto;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	margin-top: -40px;
+	font-size: 25px;
 }
 
 /* profile */
@@ -169,6 +179,10 @@ span.glyphicon.glyphicon-pencil{
 	font-size: 25px;
 	margin-top: -50px;
 
+}
+
+.glyphicon.glyphicon-thumbs-up{
+	font-size: 25px;
 }
 
 #profile_name{
