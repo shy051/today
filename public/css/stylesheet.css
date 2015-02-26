@@ -45,6 +45,7 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 4em;
+	font-size: 4vw;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -54,6 +55,7 @@ nav{
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 3em;
+	font-size: 3vw;
 }
 
 @media (max-width: @screen-xs) {
