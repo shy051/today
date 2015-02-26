@@ -140,7 +140,13 @@
             dataType: 'json',
             success: function(results){
               if(results.username == email && results.password == password){
-                window.location.href = "/index";
+
+                $.post("/login",{email:email,pass:password}, function(data){
+                  if(data=='done')
+                  {
+                    window.location.href = "/";
+                  }
+                });
                 return true;
               }else{
                 alert("auth failed");

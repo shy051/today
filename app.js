@@ -21,6 +21,7 @@ var top_story = require('./routes/top_story');
 var past_stories = require('./routes/past_stories');
 var login = require('./routes/login');
 var username = require('./routes/username');
+var logout = require('./routes/logout');
 
 
 var add = require('./routes/add');
@@ -40,8 +41,8 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
-app.use(express.session());
+app.use(express.cookieParser());
+app.use(express.session({secret: '170choduqueyoo120'}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -51,8 +52,8 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', login.view);
-app.get('/index', index.view);
+app.get('/', index.view);
+app.post('/login', login.view);
 app.get('/add_story', add_story.view);
 app.get('/most_recent', most_recent.view);
 app.get('/add', add.addPost);
@@ -65,6 +66,8 @@ app.get('/story_5', story_5.view);
 app.get('/top_story', top_story.view);
 app.get('/past_stories', past_stories.view);
 app.get('/username', username.view);
+
+app.get('/logout', logout.logout);
 
 // Example route
 // app.get('/users', user.list);

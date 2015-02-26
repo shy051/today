@@ -56,9 +56,6 @@
                     It's<div id="clockbox"></div>
                 </p>
                 <p id="intro_text2">See what's happening around the world</p>
-                <?php
-                    echo "My first PHP script!";
-                ?>
             </center>
 
             <!-- Youtube video -->
@@ -143,8 +140,8 @@
     </div>
     
 
-    <div class="sb-slidebar sb-right sb-style-push">
-        <nav>
+    <div class="sb-slidebar sb-right sb-style-push" id="hamburger">
+<!--         <nav>
             <ul class="sb-menu">
                 <li class="sb-close"><a href="/profile">
                     <h2>Steve Yoo</h2>
@@ -155,10 +152,10 @@
                 <li class="sb-close"><a href="/index">Home</a></li>
                 <li class="sb-close"><a href="/top_story">Top Stories</a></li>
                 <li class="sb-close"><a href="/most_recent">Most Recent</a></li>
-        
                 <li class="sb-close"><a href="/past_stories">Yesterday</a></li>
+                <li class="sb-close"><a href="/logout">Logout</a></li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -173,6 +170,8 @@
             $(document).ready(function() {
                 $.slidebars();
                 var imagePath = $('#input_id').val();
+
+                $('#hamburger').load('static/hamburger.html');
             });
         }) (jQuery);
     </script>

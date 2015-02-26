@@ -1,20 +1,25 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
-  "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
-
-  "repository": {
-  	"type": "git",
-  	"url": "https://github.com/StanfordHCI/cs147"
-  },
-  "license": "MIT",
-
-  "main": "server.js",
+  "name": "today",
+  "version": "1.0.0",
+  "description": "See what's happening around the world",
+  "main": "app.js",
   "dependencies": {
-    "express": "3.x"
+    "express": "^3.19.2",
+    "express3-handlebars": "^0.5.2"
   },
-  "engines": {
-  	"node": "0.10.x"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shy051/today.git"
+  },
+  "author": "Steve Yoo, Kenia Duque, Jessica Cho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shy051/today/issues"
+  },
+  "homepage": "https://github.com/shy051/today"
 }
