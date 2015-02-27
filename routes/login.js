@@ -11,13 +11,19 @@ exports.view = function(req, res){
 			}
 
 			// test a matching password
-			if(user.password == form_data.password){
-				console.log("password is a match");
-				sess.username = user.username;
-				res.end('done');
+			if(form_data.password != null){
+				if(user.password == form_data.password){
+					console.log("password is a match");
+					sess.username = user.username;
+					res.end('done');
+				}
+				else{
+					console.log("wrong password");
+					res.send(200);
+				}
 			}
 			else{
-				console.log("wrong password");
+				console.log("Null password");
 				res.send(200);
 			}
 	});
