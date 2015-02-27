@@ -1,10 +1,19 @@
-var data = require('../data.json');
+
+var models = require('../models');
 
 exports.view = function(req, res){
-	var location = req.body.location;
-	var title = req.body.title; 
-	var description = req.body.description;
+	
+	var featureID = req.params.id;
 
-	//console.log(data);
-	res.render('story_1',{"location" : location, "title": title, "description": description});
+	models.Post
+		.find()
+		.sort('-date')
+		.exec(renderFeature);
+
+	function renderFeature(err, posts){
+		if(err) console.log(err);
+		console.log("logging posts");
+		console.log(posts);
+		res.json('story_1',{ 'posts':posts });
+	}
 };
