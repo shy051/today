@@ -7,6 +7,19 @@
 		"location": "Seattle, Washington",
 		"imgURL": "img/ussoccer.jpg",
 		"likes": "49678",
+		"title": "A win for soccer",
 		"description":"Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes."
+	},
+	{
+		"name": "Lindsey Gucci",
+		"profileURL": "#",
+		"pImgUrl": "img/lady.jpg",
+		"date": "February 26, 2015",
+		"location": "South Africa",
+		"imgURL": "img/south-african-children.jpg",
+		"likes": "69678",
+		"title": "Third World Gaming", 
+		"description":"I witnessed children playing with toys that didn't require the use of electricty or WIFI. These kids certainly know how to have a good time without much materials."
 	}
+
 ]
