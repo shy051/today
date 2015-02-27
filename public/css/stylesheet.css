@@ -44,7 +44,8 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 4em;
+	font-size: 3em;
+	font-size: 8.5vw;
 	font-weight: bold;
 	padding-left: 10px;
 }
@@ -53,8 +54,19 @@ nav{
 	color: #0E426C;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 3em;
+	font-size: 1.5em;
+	font-size: 5vw;
+	margin-top: -15px;
 }
+
+@media  only screen and (max-device-width: 900px) {
+    .intro_text, #clockbox{font-size: 8.5vw;}
+}
+
+@media  all and (max-device-width: 900px) {
+    #intro_text2{font-size: 5vw;}
+}
+
 
 .feature_text{
 	color: #0E426C;
@@ -71,10 +83,9 @@ nav{
 	margin-left: auto;
 	border-radius: 10px;
 
-	height: 300px;
-	max-width: 670px;
+	height: auto;
+	width: 100%;
 	position: relative;
-	overflow-y: scroll; 
 }
 
 .boxim{
@@ -127,14 +138,25 @@ nav{
 }
 
 .post_data{
-	width: 640px;
+	max-width: 640px;
 	height: 50px;
 	padding-top: 50px;
 }
 
 .likebox{
-	width: 100px;
+	width: 200px;
 	margin-top: 30px;
+}
+
+.drop_edit_delete{
+	width: 100%;
+	height: auto;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	margin-top: -40px;
+	font-size: 25px;
+	position: relative;
 }
 
 /* profile */
@@ -160,6 +182,10 @@ span.glyphicon.glyphicon-pencil{
 
 }
 
+.glyphicon.glyphicon-thumbs-up{
+	font-size: 25px;
+}
+
 #profile_name{
 	margin-bottom: -50px;
 	display: inline-block;
@@ -171,6 +197,15 @@ span.glyphicon.glyphicon-pencil{
 	height: 500px;
 
 	/*border: 2px solid #0E426C;*/
+}
+
+.col-xs-6 {
+	padding: 2.5px;
+}
+
+.col-xs-6 img{
+	height: 150px;
+	width: 345px;
 }
 
 /* add a story */

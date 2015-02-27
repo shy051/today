@@ -35,8 +35,8 @@
                     </a></li>
             </ul>
             <ul class="nav nav-pills pull-left">
-                <li role="presentation" class="active"><a href="add_story">
-                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <li role="presentation" class="active"><a href="profile">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     </a></li>
             </ul>
         </nav>
@@ -47,21 +47,26 @@
 
     <div id="sb-site">
         <div class="body_container">
-            <center>
-                <p class="intro_text">
-                    <font size=7>Top Stories</font><br>
-                    <font size=3>See what's trending around the world</font>
-                </p>
-            </center>
-
             
             <div class="postbox">
                 <div class="post_data">
+                    <div class="drop_edit_delete">
+                        <div class="dropdown">
+                            <span style="float:right" class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></span>
+                        
+                              <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Delete</a></li>
+                              </ul>
+                        </div>
+                    
+                    </div>
+
                     <div style="float:left">
                         <img src="img/HopeSolo.jpg" alt="Image" width="75" height="75"id="postprofilepic">
                         <div style="float:right"><h5>Hope Solo</h5></div>
                     </div>
-                    <div style="float:right">
+                    <div style="float:right; position:relative;">
                         <p>Seattle, Washington</p>
                     </div>
                 </div>
