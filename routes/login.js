@@ -5,27 +5,27 @@ exports.view = function(req, res){
 	sess=req.session;
 
 	models.User.findOne({ username: form_data.username }, function(err, user){
-			if(err){
-				console.log(err);
-				res.send(500);
-			}
+		if(err){
+			console.log(err);
+			res.send(500);
+		}
 
-			// test a matching password
-			if(form_data.password != null){
-				if(user.password == form_data.password){
-					console.log("password is a match");
-					sess.username = user.username;
-					res.end('done');
-				}
-				else{
-					console.log("wrong password");
-					res.send(200);
-				}
+		// test a matching password
+		if(user){
+			if(user.password == form_data.password){
+				console.log("password is a match");
+				sess.username = user.username;
+				res.end('done');
 			}
 			else{
-				console.log("Null password");
+				console.log("wrong password");
 				res.send(200);
 			}
+		}
+		else{
+			console.log('username doesnt exist');
+			res.send(200);
+		}
 	});
 	// res.render('login',data);
 };
