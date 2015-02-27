@@ -69,23 +69,23 @@
         <div class="body_container">
             <center><h3>Tell me a story</h3></center>
 
-            <form id="addPostForm" role="form" method="get" action="/add">
+            <form id="addPostForm" role="form">
                 <div class="form-group">
                     <label for="description">In your own words...</label>
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="description"></textarea>
+                    <textarea type="text" class="form-control" placeholder="Description" rows="5" id="description"></textarea>
                 </div>
 
                 <div class="form-group">
-                  <label for="description">Where did this happen?</label>
-                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location">
+                  <label for="location">Where did this happen?</label>
+                  <input type="text" class="form-control" id="location" placeholder="City, State" id="location">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputFile">Upload photo or video</label>
+                    <label for="media">Upload photo or video</label>
 
-                    <input type="file" id="userFile" accept="images, video" capture="camcorder" name="media">
+                    <input type="file" id="userFile" accept="images, video" capture="camcorder" id="media">
 
-                    <img src='' id='theFile' width="200" name='thePic'/>
+                    <img src='' id='theFile' width="200" id='thePic'/>
                     
                 </div>
 
@@ -106,17 +106,34 @@
      <!-- Slidebars -->
     <script src="js/slidebars.js"></script>
     <script>
-        (function($) {
-            $(document).ready(function() {
-                $.slidebars();
-                $('#hamburger').load('static/hamburger.html');
-                var imagePath = $('#input_id').val();
-            });
-        }) (jQuery);
+        // Call this function when the page loads (the "ready" event)
+        $(document).ready(function() {
+            $.slidebars();
+            $('#hamburger').load('static/hamburger.html');
+            initializePage();
+        })
 
-        $('#userFile').change(function(event){
-            $('#theFile').attr('src',URL.createObjectURL(event.target.files[0]));
-        });
+        /*
+         * Function that is called when the document is ready.
+         */
+        function initializePage() {
+            $('#submitBtn').click(function(e) {
+                console.log('clicked');
+                var description = $('#addPostForm #description').val();
+                var location = $('#addPostForm #location').val();
+                
+                console.log(description);
+                console.log(location);
+
+                var json = {
+                    'post_description': description,
+                    'location': location
+                };
+                $.post('/add', json, function() {
+                    window.location.href = '/'; // reload the page
+                });
+            });
+        }
     </script>
 </body>
 

@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var add_story = require('./routes/add_story');
@@ -28,6 +29,12 @@ var add = require('./routes/add');
 
 // Example route
 // var user = require('./routes/user');
+
+var local_database_name = 'today';
+var local_database_uri  = 'mongodb://localhost/' + local_database_name
+var database_uri = process.env.MONGOLAB_URI || local_database_uri
+mongoose.connect(database_uri);
+
 
 var app = express();
 
@@ -55,8 +62,10 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.post('/login', login.view);
 app.get('/add_story', add_story.view);
+app.post('/add', add.addPost);
 app.get('/most_recent', most_recent.view);
-app.get('/add', add.addPost);
+
+
 app.get('/profile', profile.view);
 app.get('/story_1', story_1.view);
 app.get('/story_2', story_2.view);

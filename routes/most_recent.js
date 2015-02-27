@@ -1,6 +1,13 @@
-var data = require('../data.json');
+var models = require('../models');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render('most_recent',data);
+	
+	models.Post
+		.find()
+		.sort('date')
+		.exec(renderPosts);
+
+	function renderPosts(err, posts){
+		res.render('most_recent',{ 'posts':posts });
+	}
 };

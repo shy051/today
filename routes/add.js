@@ -1,17 +1,33 @@
-var data = require("../data.json");
+var models = require("../models");
 
-exports.addPost = function(req, res) {    
-	res.render('add',data);
-	var newPost= {
-		"name": "Steve Yoo",
+exports.addPost = function(req, res) {
+  var form_data = req.body;
+  console.log(form_data);
+
+  var newPost = new models.Post({
+		"name": req.session.email,
 		"profileURL": "#",
 		"pImgUrl": "img/me.jpg",
 		"date": "February 13, 2015",
-		"location": req.query.location,
+		"location": form_data.location,
 		"imgURL": "img/c_4.jpg",
 		"likes": "0",
-		"description":req.query.description
-	};
+		"description":form_data.post_description
+  });
 
-	data["posts"].unshift(newPost)
- }
+  console.log(newPost);
+
+  newPost.save(afterSaving);
+
+  function afterSaving(err){
+    if(err){
+      console.log(err);
+      res.send(500);
+    }
+    res.status(200);
+    res.redirect('/');
+  }
+
+  // make a new Project and save it to the DB
+  // YOU MUST send an OK response w/ res.send();
+}
