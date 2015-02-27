@@ -10,9 +10,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="public/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="public/css/register.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/register.css" rel="stylesheet" type="text/css">
 
     <title>Create Account</title>
 
@@ -91,10 +91,10 @@
     <div class="container">
 <center>
       <font size=7><h1>today</h1></font>
-      <img src="public/img/black-globe-icon.png" width="80">
+      <img src="img/black-globe-icon.png" width="80">
 </center> 
 
-      <form class="form-signin" action="./register" method="POST">
+      <form class="form-signin">
         <h2 class="form-signin-heading">Please Register</h2>
         <div id="usergroup" class="form-group">
           <label for="inputUsername" class="sr-only">Username</label>
@@ -119,12 +119,51 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div-->
-        <button class="btn btn-lg btn-primary btn-block" style="margin-top: 20px" type="submit">Create Account</button>
+        <button class="btn btn-lg btn-primary btn-block" style="margin-top: 20px" id="submitBtn" type="submit">Create Account</button>
       </form>
 
     </div>
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
+    <script>
+        // Call this function when the page loads (the "ready" event)
+        $(document).ready(function() {
+            initializePage();
+        })
+
+        /*
+         * Function that is called when the document is ready.
+         */
+        function initializePage() {
+            $('#submitBtn').click(function(e) {
+                e.preventDefault();
+                console.log('clicked');
+                var username = $('#inputUsername').val();
+                var password = $('#inputPassword').val();
+                var first = $('#inputFirstName').val();
+                var last = $('#inputLastName').val();
+                // console.log(description);
+                // console.log(location);
+
+                var json = {
+                    'username': username,
+                    'password': password,
+                    'first_name': first,
+                    'last_name': last
+                };
+
+                console.log(json);
+                $.post('/register/new', json, function() {
+                    // alert("posted succesfully");
+                    window.location.href = '/'; // reload the page
+                });
+            });
+        }
+    </script>
 
   </body>
 </html>

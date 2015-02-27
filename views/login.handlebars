@@ -108,16 +108,16 @@
       <img src="img/black-globe-icon.png" width="80">
       <form class="form-signin">
         <h1 class="form-signin-heading">Please Login</h1>
-        <label for="inputEmail" class="sr-only"></label>
-        <input name="username" type="text" id="email" class="form-control" placeholder="Username or Email" required autofocus>
+        <label for="inputUsername" class="sr-only"></label>
+        <input name="username" type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only"></label>
-        <input name="password" type="password" id="password" class="form-control" placeholder="Password" required>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn check_username" type="submit">Login</button>
+        <button class="btn" id="submitBtn" type="submit">Login</button>
       </form>
 
     </div> <!-- /container -->
@@ -129,35 +129,32 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-      $(document).ready(function(){
-        
-        $('.check_username').click(function(){
-          var email = $('#email').val();
-          var password = $("#password").val();
-          
-          
-          $.ajax('/username', {
-            dataType: 'json',
-            success: function(results){
-              if(results.username == email && results.password == password){
+        // Call this function when the page loads (the "ready" event)
+        $(document).ready(function() {
+            initializePage();
+        })
 
-                $.post("/login",{email:email,pass:password}, function(data){
-                  if(data=='done')
-                  {
-                    window.location.href = "/";
-                  }
+        function initializePage(){
+            $('#submitBtn').click(function(e) {
+                e.preventDefault();
+                console.log('clicked');
+                var username = $('#inputUsername').val();
+                var password = $('#inputPassword').val();
+
+
+                var json = {
+                    'username': username,
+                    'password': password,
+                };
+
+                console.log(json);
+                $.post('/login', json, function() {
+                    // alert("posted succesfully");
+                    window.location.href = '/'; // reload the page
                 });
-                return true;
-              }else{
-                alert("auth failed");
-                return false;
-              }
-            }
-          });
-          
-          return false;
-        });
-      });
+            });
+        }
     </script>
+
   </body>
 </html>

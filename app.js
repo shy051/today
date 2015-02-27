@@ -24,6 +24,7 @@ var individual_post = require('./routes/individual_post');
 var login = require('./routes/login');
 var username = require('./routes/username');
 var logout = require('./routes/logout');
+var register = require('./routes/register');
 
 
 var add = require('./routes/add');
@@ -62,8 +63,10 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.post('/login', login.view);
+
 app.get('/add_story', add_story.view);
 app.post('/add', add.addPost);
+
 app.get('/most_recent', most_recent.view);
 
 
@@ -79,6 +82,9 @@ app.get('/individual_post', individual_post.view);
 app.get('/username', username.view);
 
 app.get('/logout', logout.logout);
+
+app.get('/register', register.view);
+app.post('/register/new', register.addUser);
 
 // Example route
 // app.get('/users', user.list);
