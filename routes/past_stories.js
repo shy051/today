@@ -1,6 +1,20 @@
-var data = require('../data.json');
+var models = require('../models');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render('past_stories',data);
+	models.User
+		.find({username:req.session.username})
+		.exec(renderPage);
+
+	function renderPage(err, user){
+		console.log(user);
+		models.Post
+			.find()
+			.sort('-date')
+			.exec(renderPosts);
+		function renderPosts(err, posts){
+			console.log(posts);
+			res.render('past_stories',{ 'posts':posts, 'user':user });
+		}
+	}
+
 };

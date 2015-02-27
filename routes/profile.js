@@ -1,6 +1,11 @@
-var data = require('../data.json');
+var models = require('../models');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render('profile',data);
+	models.User
+		.find({username:req.session.username})
+		.exec(renderPage);
+
+	function renderPage(err, user){
+		res.render('profile',{ 'user':user });
+	}
 };

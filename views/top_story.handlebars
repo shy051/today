@@ -79,8 +79,7 @@
     </div>
     
 
-    <div class="sb-slidebar sb-right sb-style-push" id="hamburger">
-    </div>
+    {{> hamburger}}
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -94,8 +93,6 @@
             $(document).ready(function() {
                 $.slidebars();
                 var likes = parseInt($("#likes").text());
-
-                $('#hamburger').load('static/hamburger.html');
 
                 $("#thumb").click(function(){
                     $(this).toggleClass("liked");

@@ -1,13 +1,20 @@
 var models = require('../models');
 
 exports.view = function(req, res){
-	
-	models.Post
-		.find()
-		.sort('-date')
-		.exec(renderPosts);
+	models.User
+		.find({username:req.session.username})
+		.exec(renderPage);
 
-	function renderPosts(err, posts){
-		res.render('most_recent',{ 'posts':posts });
+	function renderPage(err, user){
+		console.log(user);
+		models.Post
+			.find()
+			.sort('-date')
+			.exec(renderPosts);
+		function renderPosts(err, posts){
+			console.log(posts);
+			res.render('most_recent',{ 'posts':posts, 'user':user });
+		}
 	}
+
 };

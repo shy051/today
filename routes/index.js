@@ -4,7 +4,13 @@ exports.view = function(req, res){
 	sess=req.session;
 
 	if(sess.username){
-		res.render('index',models);
+		models.User
+			.find({username:req.session.username})
+			.exec(renderPage);
+
+		function renderPage(err, user){
+			res.render('index',{ 'user':user });
+		}
 	}
 	else{
 		res.render('login',models);
