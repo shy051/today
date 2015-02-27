@@ -8,7 +8,7 @@ exports.addPost = function(req, res) {
 		"name": req.session.email,
 		"profileURL": "#",
 		"pImgUrl": "img/me.jpg",
-		"date": "February 13, 2015",
+		"date": new Date(),
 		"location": form_data.location,
 		"imgURL": "img/c_4.jpg",
 		"likes": "0",
@@ -21,11 +21,13 @@ exports.addPost = function(req, res) {
 
   function afterSaving(err){
     if(err){
-      console.log(err);
-      res.send(500);
+    	console.log(err);
+     	res.send(500);
     }
-    res.status(200);
-    res.redirect('/');
+    else{
+    	res.send(200);
+	}
+    //res.redirect('/');
   }
 
   // make a new Project and save it to the DB

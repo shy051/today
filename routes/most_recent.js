@@ -4,7 +4,7 @@ exports.view = function(req, res){
 	
 	models.Post
 		.find()
-		.sort('date')
+		.sort('-date')
 		.exec(renderPosts);
 
 	function renderPosts(err, posts){

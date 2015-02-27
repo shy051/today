@@ -122,19 +122,21 @@
          */
         function initializePage() {
             $('#submitBtn').click(function(e) {
-                console.log('clicked');
+                e.preventDefault();
+                // console.log('clicked');
                 var description = $('#addPostForm #description').val();
                 var location = $('#addPostForm #location').val();
                 
-                console.log(description);
-                console.log(location);
+                // console.log(description);
+                // console.log(location);
 
                 var json = {
                     'post_description': description,
                     'location': location
                 };
                 $.post('/add', json, function() {
-                    window.location.href = '/'; // reload the page
+                    // alert("posted succesfully");
+                    window.location.href = '/most_recent'; // reload the page
                 });
             });
         }
