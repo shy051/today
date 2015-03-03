@@ -52,7 +52,9 @@
             <div class="post" id="{{id}}">
                 <div class="postbox">
                     <div class="post_data">
-                        <div class="drop_edit_delete">
+
+                        <!-- print only if post belongs to you -->
+                        <div class="drop_edit_delete" id="{{name}}">
                             <div class="dropdown">
                                 <span style="float:right" class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></span>
                             
@@ -140,6 +142,21 @@
                 //console.log('back button pressed');
                 window.location.href = document.referrer;
             });
+
+            // Testing if i can use things within javascript
+            //console.log({{#user}}"{{username}}"{{/user}});
+
+
+            
+
+        }
+
+        var delEditOp = document.getElementsByClassName("drop_edit_delete");
+        for( i=0; i<delEditOp.length; i++){
+            var elmUserName = delEditOp[i].getAttribute("id");
+            if (elmUserName != {{#user}}"{{username}}"{{/user}}){
+                delEditOp[i].style.visibility= "hidden";
+            }
         }
     </script>
 </body>

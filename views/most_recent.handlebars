@@ -58,6 +58,19 @@
             <div class="post" id="{{id}}">
                 <div class="postbox">
                     <div class="post_data">
+                        <!-- edit menu -->
+                        <div class="drop_edit_delete" id="{{name}}">
+                            <div class="dropdown">
+                                <span style="float:right" class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></span>
+                            
+                                  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" id="delButton" href="#">Delete</a></li>
+                                  </ul>
+                            </div>
+                        
+                        </div>
+
                         <div style="float:left">
                             <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
                             <div style="float:right"><h5>{{name}}</h5></div>
@@ -100,7 +113,7 @@
         })
 
         function initializePage(){
-            $('.post a').click(function(e){
+            $('.post #postpic').click(function(e){
                 e.preventDefault();
                 var postId = $(this).closest('.post').attr('id');
 
@@ -115,7 +128,31 @@
                 
 
             });
+
+            $('.post #delButton').click(function(e){
+                e.preventDefault();
+                //console.log("delete called on" + url_call);
+                var postId = $(this).closest('.post').attr('id');
+
+                var url_call = '/post/'+postId+'/delete';
+                //console.log("delete called on" + url_call);
+                
+                $.post(url_call, function(){
+                    location.reload();
+                });
+                
+
+            });
         }
+
+        var delEditOp = document.getElementsByClassName("drop_edit_delete");
+        for( i=0; i<delEditOp.length; i++){
+            var elmUserName = delEditOp[i].getAttribute("id");
+            if (elmUserName != {{#user}}"{{username}}"{{/user}}){
+                delEditOp[i].style.visibility= "hidden";
+            }
+        }
+        
     </script>
 </body>
 
