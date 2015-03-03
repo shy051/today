@@ -6,7 +6,7 @@ exports.view = function(req, res){
 	var featureID = req.params.id;
 
 	models.Post
-		.find()
+		.find({"_id": featureID})
 		.sort('-date')
 		.exec(renderFeature);
 
@@ -14,6 +14,6 @@ exports.view = function(req, res){
 		if(err) console.log(err);
 		console.log("logging posts");
 		console.log(posts);
-		res.json('story_1',{ 'posts':posts });
+		res.render('story_1',{ 'posts':posts });
 	}
 };
