@@ -5,7 +5,7 @@ exports.addPost = function(req, res) {
   console.log(form_data);
 
   var newPost = new models.Post({
-		"name": req.session.email,
+		"name": req.session.username,
 		"profileURL": "#",
 		"pImgUrl": "img/me.jpg",
 		"date": new Date(),

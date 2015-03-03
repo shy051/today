@@ -1,19 +1,21 @@
 var models = require('../models');
 
 exports.view = function(req, res){
+	var postID = req.params.id;
+	//console.log("post id is " + postID);
+
 	models.User
 		.find({username:req.session.username})
 		.exec(renderPage);
 
 	function renderPage(err, user){
-		console.log(user);
 		models.Post
-			.find({name:req.session.username})
+			.find({_id: postID})
 			.sort('-date')
 			.exec(renderPosts);
 		function renderPosts(err, posts){
 			console.log(posts);
-			res.render('profile',{ 'posts':posts, 'user':user });
+			res.render('individual_post',{ 'posts':posts, 'user':user });
 		}
 	}
-};
+}
