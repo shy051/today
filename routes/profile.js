@@ -6,6 +6,14 @@ exports.view = function(req, res){
 		.exec(renderPage);
 
 	function renderPage(err, user){
-		res.render('profile',{ 'user':user });
+		console.log(user);
+		models.Post
+			.find()
+			.sort('-date')
+			.exec(renderPosts);
+		function renderPosts(err, posts){
+			console.log(posts);
+			res.render('profile',{ 'posts':posts, 'user':user });
+		}
 	}
 };
