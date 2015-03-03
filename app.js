@@ -79,6 +79,7 @@ app.get('/story_4', story_4.view);
 app.get('/story_5', story_5.view);
 
 app.get('/post/:id', post.view)
+app.post('/post/:id/delete', post.deletePost);
 
 app.get('/top_story', top_story.view);
 app.get('/past_stories', past_stories.view);
