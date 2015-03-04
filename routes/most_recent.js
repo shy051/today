@@ -6,13 +6,13 @@ exports.view = function(req, res){
 		.exec(renderPage);
 
 	function renderPage(err, user){
-		console.log(user);
+		// console.log(user);
 		models.Post
-			.find({name:req.session.username})
+			.find()
 			.sort('-date')
 			.exec(renderPosts);
 		function renderPosts(err, posts){
-			console.log(posts);
+			// console.log(posts);
 			res.render('most_recent',{ 'posts':posts, 'user':user });
 		}
 	}

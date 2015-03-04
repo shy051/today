@@ -25,6 +25,7 @@ var login = require('./routes/login');
 var username = require('./routes/username');
 var logout = require('./routes/logout');
 var register = require('./routes/register');
+var post = require('./routes/post');
 
 
 var add = require('./routes/add');
@@ -76,6 +77,10 @@ app.get('/story_2', story_2.view);
 app.get('/story_3', story_3.view);
 app.get('/story_4', story_4.view);
 app.get('/story_5', story_5.view);
+
+app.get('/post/:id', post.view)
+app.post('/post/:id/delete', post.deletePost);
+
 app.get('/top_story', top_story.view);
 app.get('/past_stories', past_stories.view);
 app.get('/individual_post', individual_post.view);

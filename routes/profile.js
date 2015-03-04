@@ -8,7 +8,7 @@ exports.view = function(req, res){
 	function renderPage(err, user){
 		console.log(user);
 		models.Post
-			.find()
+			.find({name:req.session.username})
 			.sort('-date')
 			.exec(renderPosts);
 		function renderPosts(err, posts){
