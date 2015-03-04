@@ -159,6 +159,18 @@ nav{
 	position: relative;
 }
 
+.title_post{
+	margin-top: 20px;
+	padding-top: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: auto;
+	margin-left: auto;
+
+
+
+}
+
 /* profile */
 
 .bio{
