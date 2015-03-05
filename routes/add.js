@@ -1,8 +1,23 @@
 var models = require("../models");
+var fs = require('fs');
 
 exports.addPost = function(req, res) {
+  var tmp_path = req.files.image.path;
+
+  var target_path = './public/uploads/' + req.files.image.name;
+  fs.rename(tmp_path, target_path, function(err){
+    if (err) throw err;
+    fs.unlink(tmp_path, function(){
+      if(err) throw err;
+      console.log("file uploaded!")
+    })
+  });
+    
+
   var form_data = req.body;
-  console.log(form_data);
+  // console.log("the form data is as follows:");
+  // console.log(form_data);
+  // console.log(req.files);
 
   var newPost = new models.Post({
 		"name": req.session.username,
@@ -10,26 +25,24 @@ exports.addPost = function(req, res) {
 		"pImgUrl": "img/me.jpg",
 		"date": new Date(),
 		"location": form_data.location,
-		"imgURL": "img/c_4.jpg",
+		"imgURL": "uploads/"+req.files.image.name,
 		"likes": "0",
 		"description":form_data.post_description
   });
 
-  console.log(newPost);
+  //console.log(newPost);
 
   newPost.save(afterSaving);
 
   function afterSaving(err){
     if(err){
-    	console.log(err);
-     	res.send(500);
+      console.log(err);
+      res.send(500);
     }
     else{
-    	res.send(200);
-	}
+      res.status(200);
+      res.redirect('/most_recent');
+    }
     //res.redirect('/');
   }
-
-  // make a new Project and save it to the DB
-  // YOU MUST send an OK response w/ res.send();
 }

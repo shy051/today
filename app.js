@@ -53,6 +53,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(express.session({secret: '170choduqueyoo120'}));
+app.use(express.bodyParser({uploadDir: __dirname+'/temp'}));
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -69,25 +69,25 @@
         <div class="body_container">
             <center><h3>Tell me a story</h3></center>
 
-            <form id="addPostForm" role="form">
+            <form method="post" enctype="multipart/form-data" action="/add"id="addPostForm" role="form">
                 <div class="form-group">
                   <label for="description">Title</label>
                   <input type="text" class="form-control" placeholder="Title" name="Title">
                 </div>
                 <div class="form-group">
                     <label for="description">In your own words...</label>
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" id="description"></textarea>
+                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="post_description"></textarea>
                 </div>
 
                 <div class="form-group">
                   <label for="location">Where did this happen?</label>
-                  <input type="text" class="form-control" id="location" placeholder="City, State" id="location">
+                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location">
                 </div>
 
                 <div class="form-group">
                     <label for="media">Upload photo or video</label>
 
-                    <input type="file" id="userFile" accept="images, video" capture="camcorder" id="media">
+                    <input type="file" id="userFile" accept="images" capture="camcorder" name="image">
 
                     <img src='' id='theFile' width="200" id='thePic'/>
                     
@@ -112,32 +112,35 @@
         // Call this function when the page loads (the "ready" event)
         $(document).ready(function() {
             $.slidebars();
-            initializePage();
+            //initializePage();
         })
 
         /*
          * Function that is called when the document is ready.
          */
-        function initializePage() {
-            $('#submitBtn').click(function(e) {
-                e.preventDefault();
-                // console.log('clicked');
-                var description = $('#addPostForm #description').val();
-                var location = $('#addPostForm #location').val();
+        // function initializePage() {
+        //     $('#submitBtn').click(function(e) {
+        //         e.preventDefault();
+        //         // console.log('clicked');
+        //         var description = $('#addPostForm #description').val();
+        //         var location = $('#addPostForm #location').val();
+        //         var image = $('#addPostForm #userFile').val();
                 
-                // console.log(description);
-                // console.log(location);
+        //         console.log(description);
+        //         console.log(location);
+        //         console.log(image);
 
-                var json = {
-                    'post_description': description,
-                    'location': location
-                };
-                $.post('/add', json, function() {
-                    // alert("posted succesfully");
-                    window.location.href = '/most_recent'; // reload the page
-                });
-            });
-        }
+        //         var json = {
+        //             'post_description': description,
+        //             'location': location,
+        //             'image': image
+        //         };
+        //         $.post('/add', json, function() {
+        //             // alert("posted succesfully");
+        //             window.location.href = '/most_recent'; // reload the page
+        //         });
+        //     });
+        // }
     </script>
 </body>
 
