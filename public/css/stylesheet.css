@@ -15,6 +15,11 @@ nav{
 	margin-left: auto;
 }
 
+iframe{
+	width: 100% !important;
+	height: 240px !important; 
+}
+
 .glyphicon.glyphicon-plus, .glyphicon.glyphicon-menu-hamburger, .glyphicon.glyphicon-chevron-left {
 	margin-top: 20px;
 	color: white;
@@ -39,6 +44,7 @@ nav{
 	margin-right: auto;
 	margin-left: auto;
 }
+
 .intro_text, #clockbox{
 	/*color: #5F021F;*/
 	color: #0E426C;
