@@ -85,7 +85,7 @@ app.post('/post/:id/delete', post.deletePost);
 app.get('/top_story', top_story.view);
 app.get('/past_stories', past_stories.view);
 app.get('/individual_post', individual_post.view);
-app.get('/username', username.view);
+// app.get('/username', username.view);
 
 app.get('/logout', logout.logout);
 

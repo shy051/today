@@ -2,18 +2,24 @@
 var models = require('../models');
 
 exports.view = function(req, res){
-	
-	var featureID = req.params.id;
+	sess=req.session;
 
-	models.Post
-		.find({"_id": featureID})
-		.sort('-date')
-		.exec(renderFeature);
+	if(sess.username){
+		var featureID = req.params.id;
 
-	function renderFeature(err, posts){
-		if(err) console.log(err);
-		console.log("logging posts");
-		console.log(posts);
-		res.render('story_1',{ 'posts':posts });
+		models.Post
+			.find({"_id": featureID})
+			.sort('-date')
+			.exec(renderFeature);
+
+		function renderFeature(err, posts){
+			if(err) console.log(err);
+			console.log("logging posts");
+			console.log(posts);
+			res.render('story_1',{ 'posts':posts });
+		}
+	}
+	else{
+		res.render('login',models);
 	}
 };

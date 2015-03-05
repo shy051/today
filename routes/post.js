@@ -1,35 +1,49 @@
 var models = require('../models');
 
 exports.view = function(req, res){
-	var postID = req.params.id;
-	//console.log("post id is " + postID);
+	sess=req.session;
 
-	models.User
-		.find({username:req.session.username})
-		.exec(renderPage);
+	if(sess.username){
+		var postID = req.params.id;
+		//console.log("post id is " + postID);
 
-	function renderPage(err, user){
-		models.Post
-			.find({_id: postID})
-			.sort('-date')
-			.exec(renderPosts);
-		function renderPosts(err, posts){
-			console.log(posts);
-			res.render('individual_post',{ 'posts':posts, 'user':user });
+		models.User
+			.find({username:req.session.username})
+			.exec(renderPage);
+
+		function renderPage(err, user){
+			models.Post
+				.find({_id: postID})
+				.sort('-date')
+				.exec(renderPosts);
+			function renderPosts(err, posts){
+				console.log(posts);
+				res.render('individual_post',{ 'posts':posts, 'user':user });
+			}
 		}
+	}
+	else{
+		res.render('login',models);
 	}
 }
 
 exports.deletePost = function(req, res){
-	var postID = req.params.id;
+	sess=req.session;
 
-	models.Post
-		.find({"_id": postID})
-		.remove()
-		.exec(afterRemoving);
+	if(sess.username){
+		var postID = req.params.id;
+
+		models.Post
+			.find({"_id": postID})
+			.remove()
+			.exec(afterRemoving);
 
 		function afterRemoving(err){
 			if(err) console.log(err);
 			res.send(200);
 		}
+	}
+	else{
+		res.render('login',models);
+	}
 }

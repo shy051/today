@@ -1,6 +1,13 @@
 var data = require('../data.json');
 
 exports.view = function(req, res){
-	console.log(data);
-	res.render('story_5',data);
+	sess=req.session;
+
+	if(sess.username){
+		console.log(data);
+		res.render('story_5',data);
+	}
+	else{
+		res.render('login',models);
+	}
 };

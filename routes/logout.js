@@ -1,10 +1,17 @@
 exports.logout = function(req, res){
-	req.session.destroy(function(err){
-		if(err){
-			console.log(err);
-		}
-		else{
-			res.redirect('/');
-		}
-	});
+	sess=req.session;
+
+	if(sess.username){
+		req.session.destroy(function(err){
+			if(err){
+				console.log(err);
+			}
+			else{
+				res.redirect('/');
+			}
+		});
+	}
+	else{
+		res.render('login',models);
+	}
 };
