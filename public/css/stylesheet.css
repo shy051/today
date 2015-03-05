@@ -62,13 +62,13 @@ iframe{
 	margin-top: -15px;
 }
 
-@media  only screen and (max-device-width: 900px) {
+/*@media  only screen and (max-device-width: 900px) {
     .intro_text, #clockbox{font-size: 8.5vw;}
 }
 
 @media  all and (max-device-width: 900px) {
     #intro_text2{font-size: 5vw;}
-}
+}*/
 
 
 .feature_text{
