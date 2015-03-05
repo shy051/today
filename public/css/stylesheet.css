@@ -15,6 +15,11 @@ nav{
 	margin-left: auto;
 }
 
+iframe{
+	width: 100% !important;
+	height: 200px !important; 
+}
+
 .glyphicon.glyphicon-plus, .glyphicon.glyphicon-menu-hamburger, .glyphicon.glyphicon-chevron-left {
 	margin-top: 20px;
 	color: white;
@@ -33,25 +38,23 @@ nav{
 .body_container{
 	margin-top: 100px;
 	/*width: 1170px;*/
-	max-width: 730px;
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: auto;
-	margin-left: auto;
+	width: 100%;
+
 }
+
 .intro_text, #clockbox{
-	/*color: #5F021F;*/
-	color: #0E426C;
+	/*color: #5F021F;
+	/*color: #0E426C;*/
+	color: #000000;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
-	font-size: 3em;
-	font-size: 8.5vw;
+	font-size: 12vw;
 	font-weight: bold;
 	padding-left: 10px;
 }
 
 #intro_text2{
-	color: #0E426C;
+	color: #000000;
 	font-family: "Oswald", sans-serif;
 	display: inline-block;
 	font-size: 1.5em;
@@ -59,17 +62,17 @@ nav{
 	margin-top: -15px;
 }
 
-@media  only screen and (max-device-width: 900px) {
+/*@media  only screen and (max-device-width: 900px) {
     .intro_text, #clockbox{font-size: 8.5vw;}
 }
 
 @media  all and (max-device-width: 900px) {
     #intro_text2{font-size: 5vw;}
-}
+}*/
 
 
 .feature_text{
-	color: #0E426C;
+	color: black;
 	font-family: "Oswald", sans-serif;
 	margin-left: 20px;
 }
@@ -81,7 +84,7 @@ nav{
 	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	border-radius: 10px;
+
 
 	height: auto;
 	width: 100%;
