@@ -72,22 +72,22 @@
             <form method="post" enctype="multipart/form-data" action="/add"id="addPostForm" role="form">
                 <div class="form-group">
                   <label for="description">Title</label>
-                  <input type="text" class="form-control" placeholder="Title" name="Title">
+                  <input type="text" class="form-control" placeholder="Title" name="Title" required>
                 </div>
                 <div class="form-group">
                     <label for="description">In your own words...</label>
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="post_description"></textarea>
+                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="post_description" ></textarea>
                 </div>
 
                 <div class="form-group">
                   <label for="location">Where did this happen?</label>
-                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location">
+                  <input type="text" class="form-control" id="location" placeholder="City, State" name="location" required>
                 </div>
 
                 <div class="form-group">
                     <label for="media">Upload photo or video</label>
 
-                    <input type="file" id="userFile" accept="images" capture="camcorder" name="image">
+                    <input type="file" id="userFile" accept="images" capture="camcorder" name="image" required>
 
                     <img src='' id='theFile' width="200" id='thePic'/>
                     
