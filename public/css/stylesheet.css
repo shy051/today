@@ -3,6 +3,7 @@ body, #sb-site{
 	/*background-color: #5F021F;*/
 	/*background-color: #eeeeee;*/
 	/*background-color: #0E426C;*/
+	font-family: "Oswald", sans-serif;
 }
 
 /*navigation bar*/
@@ -95,20 +96,30 @@ iframe{
 	float: left;
 	width: 100px;
 	height: 100px;
-	padding-top: 20px;
+}
+.boxim img.img-responsive{
+	width: 100px;
+	height: 100px;
 }
 
 .boxtext{
-	position: center;
+	position: left;
 	padding-top: 20px;
+	margin-left: 120px;
+}
+
+.boxtext h5{
+	font-size: 25px;
+	font-weight: bold;
+	color:#5F021F;
 }
 
 .gallery_row{
-	height: 150px;
+	height: auto;
 }
 
 .featurette-divider{
-	border: 1px solid #5F021F;
+	border: 1px solid #C4C4C4;
 }
 
 /* story already published */
