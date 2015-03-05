@@ -35,8 +35,8 @@
                     </a></li>
             </ul>
             <ul class="nav nav-pills pull-left">
-                <li role="presentation" class="active"><a href="/index">
-                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <li role="presentation" class="active"><a href="#">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" id="backBttn"></span>
                     </a></li>
             </ul>
         </nav>
@@ -72,7 +72,7 @@
             <form method="post" enctype="multipart/form-data" action="/add"id="addPostForm" role="form">
                 <div class="form-group">
                   <label for="description">Title</label>
-                  <input type="text" class="form-control" placeholder="Title" name="Title" required>
+                  <input type="text" class="form-control" placeholder="Title" name="title" required>
                 </div>
                 <div class="form-group">
                     <label for="description">In your own words...</label>
@@ -112,35 +112,18 @@
         // Call this function when the page loads (the "ready" event)
         $(document).ready(function() {
             $.slidebars();
-            //initializePage();
+            initializePage();
         })
 
         /*
          * Function that is called when the document is ready.
          */
-        // function initializePage() {
-        //     $('#submitBtn').click(function(e) {
-        //         e.preventDefault();
-        //         // console.log('clicked');
-        //         var description = $('#addPostForm #description').val();
-        //         var location = $('#addPostForm #location').val();
-        //         var image = $('#addPostForm #userFile').val();
-                
-        //         console.log(description);
-        //         console.log(location);
-        //         console.log(image);
-
-        //         var json = {
-        //             'post_description': description,
-        //             'location': location,
-        //             'image': image
-        //         };
-        //         $.post('/add', json, function() {
-        //             // alert("posted succesfully");
-        //             window.location.href = '/most_recent'; // reload the page
-        //         });
-        //     });
-        // }
+        function initializePage() {
+            $('#backBttn').click(function(e) {
+                e.preventDefault();
+                window.history.back();
+            });
+        }
     </script>
 </body>
 

@@ -5,6 +5,7 @@ var Schema = Mongoose.Schema;
 
 var PostSchema = new Schema({
 	"name": String,
+	"title": String,
 	"profileURL": String,
 	"pImgUrl": String,
 	"date": Date,
