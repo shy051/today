@@ -12,7 +12,8 @@ var PostSchema = new Schema({
 	"location": String,
 	"imgURL": String,
 	"likes": Number,
-	"description": String
+	"description": String,
+	"likedBy": [String]
 });
 
 
@@ -21,9 +22,9 @@ var UserSchema = new Schema({
     password: { type: String, required: true },
     firstName:{ type: String, required: true },
     lastName: { type: String, required: true },
-    imgURL: String,
+    imgSrc: String,
     stories: Number,
-    likes: Number
+    points: Number
 });
 
 exports.Post = Mongoose.model('Post', PostSchema);

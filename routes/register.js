@@ -11,7 +11,10 @@ exports.addUser = function(req, res){
 		username: form_data.username,
 		password: form_data.password,
 		firstName:form_data.first_name,
-		lastName: form_data.last_name
+		lastName: form_data.last_name,
+		imgSrc: "img/default_user.png",
+		stories: 0,
+		points: 0
 	});
 
 	console.log(newUser);

@@ -37,7 +37,7 @@ models.Post
 function onceClear(err) {
   if(err) console.log(err);
 
-  // loop over the projects, construct and save an object from each one
+  // loop over the posts, construct and save an object from each one
   // Note that we don't care what order these saves are happening in...
   var to_save_count = data_json.length;
   for(var i=0; i<data_json.length; i++) {
