@@ -111,7 +111,12 @@ iframe{
 .boxtext h5{
 	font-size: 25px;
 	font-weight: bold;
-	color:#5F021F;
+	/*color:#5F021F;*/
+	color: black;
+}
+
+.boxtext p{
+	color: #6E6568;
 }
 
 .gallery_row{
