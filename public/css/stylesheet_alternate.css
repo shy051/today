@@ -1,0 +1,373 @@
+body, #sb-site{
+	background-color: #C4C4C4;
+	/*background-color: #5F021F;*/
+	/*background-color: #eeeeee;*/
+	/*background-color: #0E426C;*/
+}
+
+/*navigation bar*/
+
+nav{
+	max-width: 730px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.glyphicon.glyphicon-plus, .glyphicon.glyphicon-menu-hamburger, .glyphicon.glyphicon-chevron-left {
+	margin-top: 20px;
+	color: white;
+}
+.navbar.navbar-fixed-top{
+	background-color: #5F021F;
+	color:white;
+	font-family: "Oswald", sans-serif;
+}
+
+.nav>li>a:focus, .nav>li>a:hover, .nav-pills>li.active>a, .nav-pills>li.active>a:hover{
+	background-color: #5F021F;
+}
+
+/* homepage */
+.body_container{
+	margin-top: 100px;
+	/*width: 1170px;*/
+	max-width: 730px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.intro_text, #clockbox{
+	/*color: #5F021F;*/
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	display: inline-block;
+	font-size: 3em;
+	font-size: 8.5vw;
+	font-weight: bold;
+	
+	padding-left: 10px;
+}
+
+#intro_text2{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	display: inline-block;
+	font-size: 1.5em;
+	font-size: 5vw;
+	margin-top: -15px;
+}
+
+@media  only screen and (max-device-width: 900px) {
+    .intro_text, #clockbox{font-size: 8.5vw;}
+}
+
+@media  all and (max-device-width: 900px) {
+    #intro_text2{font-size: 5vw;}
+}
+
+
+.feature_text{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	margin-left: 20px;
+}
+
+/* vertical story gallery */
+.outbox{
+	background-color:white;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+
+	height: 300px;
+	width: 100%;
+	position: relative;
+	overflow-y: scroll; 
+
+}
+
+.boxim{
+	float: left;
+	width: 100px;
+	height: 100px;
+	padding-top: 20px;
+}
+
+.boxtext{
+	position: center;
+	padding-top: 20px;
+}
+
+.gallery_row{
+	height: 150px;
+}
+
+.featurette-divider{
+	border: 1px solid #5F021F;
+}
+
+/* story already published */
+.postbox{
+	background-color:white;
+	margin-top: 50px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+
+	height: auto;
+	max-width: 670px;
+	position: relative;
+	border: 4px solid #5F021F;
+}
+
+
+#postprofilepic{
+	border-radius: 50%;
+}
+
+#postpic{
+
+	width: 280px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 30px;
+}
+
+.post_data{
+	max-width: 640px;
+	height: 50px;
+	padding-top: 50px;
+}
+
+.likebox{
+	width: 200px;
+	margin-top: 30px;
+}
+
+.drop_edit_delete{
+	width: 100%;
+	height: auto;
+}
+
+.glyphicon.glyphicon-chevron-down{
+	margin-top: -40px;
+	font-size: 25px;
+	position: relative;
+}
+
+/* profile */
+
+.bio{
+	color: #0E426C;
+	font-family: "Oswald", sans-serif;
+	width: 300px;
+	float: right;
+}
+
+.user-name{
+	width: 300px;
+	height: 70px;
+	display: inline-block;
+}
+
+span.glyphicon.glyphicon-pencil{
+	display: inline-block;
+	float: right;
+	font-size: 25px;
+	margin-top: -50px;
+
+}
+
+.glyphicon.glyphicon-thumbs-up{
+	font-size: 25px;
+}
+
+#profile_name{
+	margin-bottom: -50px;
+	display: inline-block;
+	float: left;
+}
+
+.profilebox{
+	margin-top: 60px;
+	height: 500px;
+
+	/*border: 2px solid #0E426C;*/
+}
+
+.col-xs-6 {
+	padding: 2.5px;
+}
+
+.col-xs-6 img{
+	height: 150px;
+	width: 345px;
+}
+
+/* add a story */
+#text_box{
+	width: 400px;
+	height: 200px;
+	margin-top: 20px;
+}
+
+
+.file_input{
+	margin-top: 30px;
+}
+
+
+/* story liked */
+.liked{
+	color: blue;
+}
+
+
+
+/* Slidebars */
+
+.profile-nav{
+	padding: 14px 14px 14px 14px;
+}
+
+.profile-nav p{
+	padding: 0;
+	margin: 0;
+}
+
+.sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close {
+	cursor: pointer;
+}
+
+
+.sb-slidebar {
+	background-color: #222222;
+}
+
+/* ---------------
+ * 003 - Slidebars
+ */
+
+.sb-slidebar {
+	background-color: #222222; /* Background colour. */
+	color: #e8e8e8; /* Text colour. */
+}
+
+.sb-slidebar a {
+	color: #e8e8e8;
+	text-decoration: none;
+}
+
+.sb-slidebar a:hover {
+	color: #337ab7; /* Link hover colour. */
+	text-decoration: none;
+}
+
+/* Main Menu */
+.sb-menu { /* Apply to <ul> or <ol>. */
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.sb-menu li {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.1); /* Will lighten any background colour you set. */
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Will darken any background colour you set. */
+}
+
+.sb-menu > li:first-child {
+	border-top: none; /* Removes top border from first list item.. */
+}
+
+.sb-menu > li:last-child {
+	border-bottom: none; /* Removed bottom border from last list item. */
+}
+
+.sb-menu li a {
+	width: 100%; /* Makes links full width. */
+	display: inline-block;
+	padding: 1em; /* Creates an even padding the same size as your font. */
+	color: #f2f2f2;
+}
+
+.sb-menu li a:hover {
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.05); /* Will lighten any background colour you set. */
+}
+
+.sb-menu li p{
+	margin:0;
+	padding:0;
+}
+.sb-menu li h2{
+	margin:0;
+	padding:0;	
+}
+
+/* Borders */
+.sb-left .sb-menu li a {
+	border-left: 3px solid transparent;
+}
+
+.sb-left .sb-menu li a:hover {
+	border-left: 3px solid; /* Removes transparent colour, so border colour will be the same as link hover colour. */
+}
+
+.sb-right .sb-menu li a {
+	border-right: 3px solid transparent;
+}
+
+.sb-right .sb-menu li a:hover {
+	border-right: 3px solid; /* Removes transparent colour, so border colour will be the same as link hover colour. */
+}
+
+/* Left */
+
+
+.sb-menu li .sb-open-right, .sb-menu li small {
+	display: inline-block;
+	padding: 14px;
+}
+
+.sb-menu li img {
+	margin: 5px;
+}
+
+/* Right */
+aside#about-me {
+	padding: 14px 14px 14px 14px;
+}
+
+img.img-me {
+	margin: 14px auto;
+	border: 4px solid #fff;
+}
+
+/* Slidebar Type */
+
+.sb-slidebar, .sb-slidebar h3 {
+	color: #F0F0F0;
+}
+
+.sb-slidebar ul.sb-nav li a {
+	color: #DEDEDE;
+}
+
+.sb-slidebar ul.sb-nav li a:hover {
+	color: #C7C7C7;
+	text-decoration: none;
+}
+
+.sb-slidebar ul.sb-nav li span:hover {
+	color: #C7C7C7;
+}
