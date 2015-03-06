@@ -46,7 +46,9 @@ iframe{
 .body_container_addstory{
 	margin-top: 100px;
 	/*width: 1170px;*/
-	width: 640px;
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 .intro_text, #clockbox{
