@@ -47,13 +47,7 @@
     
     <div id="sb-site">
         <div class="body_container_profile">
-            <center>
-                <p class="intro_text">
-                    <font size=7>Profile</font><br>
-                </p>
-            </center>
 
-            
             <div class="profilebox">
 
                 <img src="img/default_user.png" style="float:left" width="100" />
@@ -67,12 +61,15 @@
                         </a>
                     </div>
 
+                    <div id="point-box">
+                        <p id="story_points">{{stories}} stories</p>
                     
-                    <p>{{stories}} stories</p>
-                    <p>{{points}} points</p>
-                    <p>Your description</p>
+                        <p id="points_points">{{points}} points</p>
+                    </div>
+                    <div id="description_profile">
+                        <p>Your description</p>
                     {{/each}}
-
+                    </div>
                 </div>
 
             </div>

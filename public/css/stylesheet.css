@@ -43,15 +43,8 @@ iframe{
 
 }
 
-.body_container_addstory{
-	margin-top: 100px;
-	/*width: 1170px;*/
-	width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
-}
 
-.body_container_profile{
+.body_container_profile, .body_container_addstory{
 	margin-top: 100px;
 	/*width: 1170px;*/
 	width: 100%;
@@ -219,8 +212,9 @@ iframe{
 
 .user-name{
 	width: 200px;
-	height: 70px;
+	height: auto;
 	display: inline-block;
+
 }
 
 span.glyphicon.glyphicon-pencil{
@@ -238,9 +232,9 @@ span.glyphicon.glyphicon-pencil{
 }
 
 #profile_name{
-	margin-bottom: -50px;
 	display: inline-block;
 	float: left;
+	margin-bottom: 0;
 }
 
 .profilebox{
@@ -249,6 +243,22 @@ span.glyphicon.glyphicon-pencil{
 
 	/*border: 2px solid #0E426C;*/
 }
+
+#story_points{
+	display: inline-block;
+	float: left;
+
+}
+
+#points_points{
+	margin-left: 80px;
+
+}
+
+#point-box{
+	margin-top: -19px;
+}
+
 
 .col-xs-6 {
 	padding: 2.5px;
