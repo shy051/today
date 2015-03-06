@@ -169,7 +169,7 @@ iframe{
 	margin-top: 50px;
 	height: auto;
 	width: 100%;
-	border: 2px solid #5F021F;
+	border: 3px solid #5F021F;
 }
 
 .post_top{
@@ -222,6 +222,7 @@ iframe{
 
 .title{
 	padding-left: 20px;
+	font-weight: bold;
 }
 
 .post-text{
