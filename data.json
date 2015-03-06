@@ -24,15 +24,51 @@
 		"likedBy": []
 	},
 	{
-		"name": "James Marvin",
+		"name": "Brandon Smith",
 		"profileURL": "#",
-		"pImgUrl": "img/HopeSolo.jpg",
+		"pImgUrl": "img/brandon.jpg",
 		"date": "March 06, 2015",
 		"location": "Spain",
-		"imgURL": "img/ussoccer.jpg",
-		"likes": "62578",
-		"title": "A win for soccer",
+		"imgURL": "img/tomato.jpg",
+		"likes": "53678",
+		"title": "Tomato Festival",
 		"description":"I was in Spain today, and was able to participate in the tomato festival. It was both fun and scary! I still taste the tomato in my mouth.",
+		"likedBy": []
+	},
+	{
+		"name": "Carrie Wilson",
+		"profileURL": "#",
+		"pImgUrl": "img/carrie.jpg",
+		"date": "March 06, 2015",
+		"location": "Los Angeles, CA",
+		"imgURL": "img/la.jpg",
+		"likes": "50678",
+		"title": "Los Angeles Marathon",
+		"description":"Although I hate running, I went for a run with my friends at the LA marathon. I completed the 5 miles trek in less than 20 minutes! My personal best time ever.",
+		"likedBy": []
+	},
+	{
+		"name": "Jim Choo",
+		"profileURL": "#",
+		"pImgUrl": "img/jim.jpg",
+		"date": "March 06, 2015",
+		"location": "Tokyo, Japan",
+		"imgURL": "img/android.jpg",
+		"likes": "42678",
+		"title": "Android Robots",
+		"description":"I was able to fly to Tokyo to catch the testing of the new androids! It was cool to see the scientific advancements but also super weird to see the robots looked like people.",
+		"likedBy": []
+	},
+	{
+		"name": "Julie Johnson",
+		"profileURL": "#",
+		"pImgUrl": "img/julie.jpg",
+		"date": "March 06, 2015",
+		"location": "New Zealand",
+		"imgURL": "img/christchurch.jpg",
+		"likes": "32678",
+		"title": "Christchurch Earthquake",
+		"description":"New Zealand experienced a large earthquake while I was visiting for an away game. Send love to New Zealand.",
 		"likedBy": []
 	}
 
