@@ -26,13 +26,17 @@ function initializePage() {
 		});
 	});
 
-  $(".version_a").click(function(){
+  $(".version_a").click(function(e){
+  	e.preventDefault();
     //add your Woopra tracking code for version A's like button click event
     woopra.track("a_version_feature_click");
+    window.location.href="/story_1";
   });
 
-  $(".version_b").click(function(){
+  $(".version_b").click(function(e){
+  	e.preventDefault();
     //add your Woopra tracking code for version A's like button click event
     woopra.track("b_version_feature_click");
+    window.location.href="/story_1";
   });
 }
