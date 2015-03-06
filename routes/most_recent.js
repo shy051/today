@@ -15,7 +15,7 @@ exports.view = function(req, res){
 				.sort('-date')
 				.exec(renderPosts);
 			function renderPosts(err, posts){
-				// console.log(posts);
+				console.log(posts);
 				res.render('most_recent',{ 'posts':posts, 'user':user });
 			}
 		}
