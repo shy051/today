@@ -54,45 +54,26 @@
                 <img src="img/default_user.png" style="float:center" width="200" />
 
                 </p>
-            </center>
 
-
-
-
-
-            
-            <div class="profilebox">
-               
-                <div class="bio">
-                    <div class="user-name"> 
-                        {{#each user}}                  
-                        <font size= 8><p id="profile_name">{{firstName}} {{lastName}}</p><br></font>
-                        {{/each}}
-                        <a href="#">
-                        
-                        </a>
-                    </div>
-                      
-                </div>
-
-            </div>
-
-
- <div class= "edit_story">
-
-                <div class="form-group">
+                    <div class="form-group">
                     <label for="media">Change photo</label>
 
-                    <input type="file" id="userFile" accept="images" capture="camcorder" name="image" required>
+                    <input style="margin-left:110px" type="file" id="userFile" accept="images" capture="camcorder" name="image"required>
 
                     <img src='' id='theFile' width="200" id='thePic'/>
                     
                 </div>
+            </center>
+
+        
+
+
+ <div class= "edit_story">
 
             <div class="description" width="200">
-                    <textarea type="text" class="form-control" placeholder="Description" rows="5" name="post_description" ></textarea>
+                    <textarea type="text" class="form-control" placeholder="Edit your Description" rows="5" name="post_description" ></textarea>
             </div>
-                            <input type="submit" id="submitBtn" class="btn btn-default" value="Save"></input>
+                            <input type="submit" id="submitBtn" class="btn btn-default" value="Save" style="float:right"></input>
 
  </div>
 
