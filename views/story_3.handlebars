@@ -36,23 +36,37 @@
                     </a></li>
             </ul>
             <ul class="nav nav-pills pull-left">
-                <li role="presentation" class="active"><a href="/index">
+                <li role="presentation" class="active"><a href="/">
                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                     </a></li>
             </ul>
         </nav>
         <center>
+            <!--<font style="text-decoration: none; color: white;"><h1 >{{location}}</h1></font>-->
             <a href="/" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
 
     <div id="sb-site">
+     <!--  
+    <div class="body_container" style="background-image: url('{{imgUrl}}');">
 
+    </div>
+    <div class="darker"></div>
+    <div class="article_description">
+            <h1>{{title}}</h1>
+            <h2>{{desciption}}</h2>
+    </div>
+    </div>-->
+
+
+        
         <div class="body_container">
+            <!--
             <center>
                 <p class="intro_text">
-                    <font size=7>Los Angeles Marathon</font><br>
-                    <font size=3>Los Angeles, CA</font>
+                    <font size=7>Third World Gaming</font><br>
+                    <font size=3>South Africa</font>
                 </p>
             </center>
 
@@ -60,25 +74,56 @@
             <div class="postbox">
                 <div class="post_data">
                     <div style="float:left">
-                        <img src="img/kenia.jpg" alt="Image" width="75" height="75"id="postprofilepic">
-                        <div style="float:right"><h5>Kenia Duque</h5></div>
+                        <img src="img/jess.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                        <div style="float:right"><h5>Jessica Cho</h5></div>
                     </div>
                     <div style="float:right">
-                        <p>Los Angeles, CA</p>
+                        <p>South Africa</p>
                     </div>
                 </div>
-                <img src="img/la.jpg" alt="Image" id="postpic">
+                <img src="img/south-african-children.jpg" alt="Image" id="postpic">
                 <div class="likebox">
                     <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
                     <p id="likes" style="display:inline">49678</p> Likes
                 </div>
-                <font size=4><p>Although I hate running, I went for a run with my friends at the LA marathon. I completed the 5 miles trek in less than 20 minutes! My personal best time ever.</p></font>
+                <font size=4><p>I witnessed children playing with toys that didn't require the use of electricty or WIFI. These kids certainly know how to have a good time without much materials.</p></font>
                 
             </div>              
         
-        </div>
+        </div>-->
+
+           <div class="post" id="{{id}}">
+                <div class="postbox">
+                    <div class="post_top">
+                    </div>
+
+                    <div class="post_top2">
+                        <div style="float:left">
+                            <img src="img/carrie.jpg" alt="Image" width="75" height="75"id="postprofilepic">
+                            <div style="float:right" class="post_top2text"><h4>Carrie Wilson</h4>
+                                <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Los Angeles, CA</p>
+                                <p><span class="glyphicon glyphicon-time" aria-hidden="true"></span>4:34 AM UTC</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href='#'>
+                        <img src="img/la.jpg" alt="Image" id="postpic">
+                    </a>
+
+                    <div class="likebox">
+                        <a href="#" style="color: black"><span style="float:left" class="glyphicon glyphicon-thumbs-up thumb" aria-hidden="true" id="{{id}}"></span></a>
+                        <p id="likes" style="display:inline">50678</p> Likes
+                    </div><br>
+                    <h3 class="title">Los Angeles Marathon</h3>
+                    <font size=4><p class="post-text">Although I hate running, I went for a run with my friends at the LA marathon. I completed the 5 miles trek in less than 20 minutes! My personal best time ever.</p></font>
+
+
+                </div>
+            </div>
+    
     <!--sb-site-->
-    </div>
+   
 
     <div class="sb-slidebar sb-right sb-style-push" id="hamburger">
     </div>
@@ -101,3 +146,4 @@
 </body>
 
 </html>
+
