@@ -12,7 +12,8 @@ exports.view = function(req, res){
 			console.log(user);
 			models.Post
 				.find()
-				.sort('-date')
+				.sort('-likes')
+				.limit(10)
 				.exec(renderPosts);
 			function renderPosts(err, posts){
 				console.log(posts);

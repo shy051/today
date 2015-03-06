@@ -44,8 +44,8 @@
             <a href="/" style="text-decoration: none; color: white;"><h1 >today</h1></a>
         </center>
     </div>
-
     <div id="sb-site">
+
         <div class="body_container">
             <center>
                 <p class="intro_text">
@@ -54,28 +54,44 @@
                 </p>
             </center>
 
-            
-            <div class="postbox">
-                <div class="post_data">
-                    <div style="float:left">
-                        <img src="img/HopeSolo.jpg" alt="Image" width="75" height="75"id="postprofilepic">
-                        <div style="float:right"><h5>Hope Solo</h5></div>
+            {{#each posts}}
+            <div class="post" id="{{id}}">
+                <div class="postbox">
+                    <div class="post_data">
+                        <!-- edit menu -->
+                        <div class="drop_edit_delete" id="{{name}}">
+                            <div class="dropdown">
+                                <span style="float:right" class="glyphicon glyphicon-chevron-down" aria-hidden="true" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"></span>
+                            
+                                  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Edit</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" id="delButton" href="#">Delete</a></li>
+                                  </ul>
+                            </div>
+                        
+                        </div>
+
+                        <div style="float:left">
+                            <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
+                            <div style="float:right"><h5>{{name}}</h5></div>
+                        </div>
+                        <div style="float:right">
+                            <p>{{date}}</p>
+                            <p>{{location}}</p>
+                        </div>
                     </div>
-                    <div style="float:right">
-                        <p>Seattle, Washington</p>
-                    </div>
+                    <a href='#'>
+                        <img src="{{imgURL}}" alt="Image" id="postpic">
+                    </a>
+                    <div class="likebox">
+                        <a href="#" style="color: black"><span style="float:left" class="glyphicon glyphicon-thumbs-up thumb" aria-hidden="true" id="{{id}}"></span></a>
+                        <p id="likes" style="display:inline">{{likes}}</p> Likes
+                    </div><br>
+                    <font size=4><p>{{description}}</p></font>
                 </div>
-            
-                <div class="title_post">The USWNT win again and again and more text</div>
-                
-                <img src="img/ussoccer.jpg" alt="Image" id="postpic">
-                <div class="likebox">
-                    <span style="float:left" class="glyphicon glyphicon-thumbs-up" aria-hidden="true" id="thumb"></span>
-                    <p id="likes" style="display:inline">49678</p> Likes
-                </div>
-                <font size=4><p>Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes.</p></font>
-                
-            </div>              
+            </div>
+
+            {{/each}}
         
         </div>
 
@@ -92,26 +108,98 @@
     <!-- Slidebars -->
     <script src="js/slidebars.js"></script>
     <script>
-        (function($) {
-            $(document).ready(function() {
-                $.slidebars();
-                var likes = parseInt($("#likes").text());
+        $(document).ready(function() {
+            $.slidebars();
 
-                $("#thumb").click(function(){
-                    $(this).toggleClass("liked");
-                    var theLike = parseInt($("#likes").text());
+            initializePage();
+        })
 
-                    if(theLike == likes){
-                        theLike++;
-                    }
-                    else{
-                        theLike--;
-                    }
+        function initializePage(){
+            $('.post #postpic').click(function(e){
+                e.preventDefault();
+                var postId = $(this).closest('.post').attr('id');
 
-                    $("#likes").text(theLike);
+                var url_call = '/post/'+postId;
+                console.log("url call is " + url_call);
+                var json = {
+                    'id': postId
+                }
+                $.get(url_call, json, function(){
+                    window.location.href = url_call;
                 });
+                
+
             });
-        }) (jQuery);
+
+            $('.post #delButton').click(function(e){
+                e.preventDefault();
+                //console.log("delete called on" + url_call);
+                var postId = $(this).closest('.post').attr('id');
+
+                var url_call = '/post/'+postId+'/delete';
+                //console.log("delete called on" + url_call);
+                
+                $.post(url_call, function(){
+                    location.reload();
+                });
+                
+
+            });
+
+            $('.thumb').click(function(e){
+                e.preventDefault();
+                // var likeLength = $(this).closest('.likebox').text().indexOf("L");
+                // var likeCount = parseInt($(this).closest('.likebox').text().substring(0,likeLength));
+
+                var postId = $(this).closest('.post').attr('id');
+                var likeCount = $(this).closest('.likebox').find("#likes").text();
+
+                if($(this).hasClass("liked")){
+                    // unlike that shiz
+                    $(this).removeClass("liked");
+
+                    // decrease the like count
+                    $(this).closest('.likebox').find("#likes").text(--likeCount);
+                    $.post('/unlike', {"id": postId}, function() {
+                        console.log("post got unliked!");
+                     });
+                    // do databse stuff
+                }
+                else{
+                    // like it!
+                    $(this).addClass("liked");
+
+                    // increase the like count
+                    $(this).closest('.likebox').find("#likes").text(++likeCount);
+                    $.post('/like', {"id": postId}, function() {
+                        console.log("post got liked");
+                     });
+                }
+                //console.log("likes : " + likeCount);
+            });
+        }
+
+        var delEditOp = document.getElementsByClassName("drop_edit_delete");
+        for( i=0; i<delEditOp.length; i++){
+            var elmUserName = delEditOp[i].getAttribute("id");
+            if (elmUserName != {{#user}}"{{username}}"{{/user}}){
+                delEditOp[i].style.visibility= "hidden";
+            }
+        }
+
+        var sessUser = {{#user}}"{{username}}"{{/user}};
+        // console.log('sess user is ' + sessUser);
+        
+        {{#each posts}}
+            var postId = "{{id}}";
+            {{#likedBy}}
+             if("{{this}}" == sessUser){
+                $("#"+ postId+ " .thumb").addClass("liked");
+             }
+             {{/likedBy}}
+        {{/each}}
+
+        
     </script>
 </body>
 
