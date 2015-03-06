@@ -30,6 +30,7 @@ var edit_profile = require('./routes/edit_profile');
 
 
 var add = require('./routes/add');
+var like = require('./routes/like');
 
 // Example route
 // var user = require('./routes/user');
@@ -72,6 +73,8 @@ app.post('/add', add.addPost);
 
 app.get('/most_recent', most_recent.view);
 
+app.post('/like', like.likePost);
+app.post('/unlike', like.unlikePost);
 
 app.get('/profile', profile.view);
 app.get('/story_1', story_1.view);
