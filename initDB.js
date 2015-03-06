@@ -56,15 +56,5 @@ function onceClear(err) {
       }
     });
   }
-
-  models.User
-    .find()
-    .remove()
-    .exec(clearMe);
-
-  function clearMe(err){
-    if(err) console.log(err);
-    mongoose.connection.close()
-  }
 }
 
