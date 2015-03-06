@@ -205,14 +205,12 @@ iframe{
 /* profile */
 
 .bio{
-	color: #0E426C;
-	font-family: "Oswald", sans-serif;
-	width: 300px;
+	width: auto;
 	float: right;
 }
 
 .user-name{
-	width: 300px;
+	width: 200px;
 	height: 70px;
 	display: inline-block;
 }
@@ -222,6 +220,8 @@ span.glyphicon.glyphicon-pencil{
 	float: right;
 	font-size: 25px;
 	margin-top: -50px;
+	padding-top: 10px;
+	color: #5F021F;
 
 }
 
