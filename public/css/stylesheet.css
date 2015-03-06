@@ -47,6 +47,14 @@ iframe{
 	margin-top: 100px;
 	/*width: 1170px;*/
 	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.body_container_profile{
+	margin-top: 100px;
+	/*width: 1170px;*/
+	width: 100%;
 	padding-left: 30px;
 	padding-right: 30px;
 }
@@ -207,7 +215,6 @@ iframe{
 .bio{
 	width: auto;
 	float: right;
-	margin-right: 20px;
 }
 
 .user-name{
@@ -238,7 +245,7 @@ span.glyphicon.glyphicon-pencil{
 
 .profilebox{
 	margin-top: 60px;
-	height: 500px;
+	height: auto;
 
 	/*border: 2px solid #0E426C;*/
 }
