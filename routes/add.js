@@ -43,8 +43,12 @@ exports.addPost = function(req, res) {
         res.send(500);
       }
       else{
-        res.status(200);
-        res.redirect('/most_recent');
+        models.User.update({username: req.session.username}, {$inc: {stories : 1}}, afterUser);
+        function afterUser(err){
+          if(err) throw err;
+          res.status(200);
+          res.redirect('/most_recent');
+        }
       }
       //res.redirect('/');
     }

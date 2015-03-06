@@ -24,7 +24,8 @@ var UserSchema = new Schema({
     lastName: { type: String, required: true },
     imgSrc: String,
     stories: Number,
-    points: Number
+    points: Number,
+    description: String
 });
 
 exports.Post = Mongoose.model('Post', PostSchema);

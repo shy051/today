@@ -40,7 +40,11 @@ exports.deletePost = function(req, res){
 
 		function afterRemoving(err){
 			if(err) console.log(err);
-			res.send(200);
+        	models.User.update({username: req.session.username}, {$inc: {stories : -1}}, afterUser);
+			function afterUser(err){
+	        	if(err) throw err;
+				res.send(200);
+        	}
 		}
 	}
 	else{

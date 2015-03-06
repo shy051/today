@@ -73,7 +73,7 @@
 
                         <div style="float:left">
                             <img src="{{pImgUrl}}" alt="Image" width="75" height="75"id="postprofilepic">
-                            <div style="float:right"><h5>{{name}}</h5></div>
+                            <div style="float:right"><h5 id="postername">{{name}}</h5></div>
                         </div>
                         <div style="float:right">
                             <p>{{date}}</p>
@@ -154,13 +154,15 @@
                 var postId = $(this).closest('.post').attr('id');
                 var likeCount = $(this).closest('.likebox').find("#likes").text();
 
+                var pName = $(this).closest('.postbox').find("#postername").text();
+
                 if($(this).hasClass("liked")){
                     // unlike that shiz
                     $(this).removeClass("liked");
 
                     // decrease the like count
                     $(this).closest('.likebox').find("#likes").text(--likeCount);
-                    $.post('/unlike', {"id": postId}, function() {
+                    $.post('/unlike', {"id": postId, "name":pName}, function() {
                         console.log("post got unliked!");
                      });
                     // do databse stuff
@@ -171,7 +173,7 @@
 
                     // increase the like count
                     $(this).closest('.likebox').find("#likes").text(++likeCount);
-                    $.post('/like', {"id": postId}, function() {
+                    $.post('/like', {"id": postId, "name":pName}, function() {
                         console.log("post got liked");
                      });
                 }

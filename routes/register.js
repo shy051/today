@@ -14,7 +14,8 @@ exports.addUser = function(req, res){
 		lastName: form_data.last_name,
 		imgSrc: "img/default_user.png",
 		stories: 0,
-		points: 0
+		points: 0,
+		description: "Your description"
 	});
 
 	console.log(newUser);
