@@ -15,7 +15,7 @@
 		"name": "Lindsey Gucci",
 		"profileURL": "#",
 		"pImgUrl": "img/lady.jpg",
-		"date": "February 26, 2015",
+		"date": "March 06, 2015",
 		"location": "South Africa",
 		"imgURL": "img/south-african-children.jpg",
 		"likes": "69678",
@@ -23,5 +23,17 @@
 		"description":"I witnessed children playing with toys that didn't require the use of electricty or WIFI. These kids certainly know how to have a good time without much materials.",
 		"likedBy": []
 	}
+	{
+		"name": "James Marvin",
+		"profileURL": "#",
+		"pImgUrl": "img/HopeSolo.jpg",
+		"date": "March 06, 2015",
+		"location": "Spain",
+		"imgURL": "img/ussoccer.jpg",
+		"likes": "62578",
+		"title": "A win for soccer",
+		"description":"I was in Spain today, and was able to participate in the tomato festival. It was both fun and scary! I still taste the tomato in my mouth.",
+		"likedBy": []
+	},
 
 ]
