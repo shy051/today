@@ -47,35 +47,34 @@
     
     <div id="sb-site">
         <div class="body_container">
-            <center>
-                <p class="intro_text">
-                    <font size=6>Edit Your Profile</font><br>
 
-                <img src="img/default_user.png" style="float:center" width="200" />
+            <form method="post" enctype="multipart/form-data" action="/update" role="form">
+                <center>
+                    <p class="intro_text">
+                        <font size=6>Edit Your Profile</font><br>
 
-                </p>
+                    {{#each user}} <img src="{{imgSrc}}" style="float:center" width="200" /> {{/each}}
 
-                    <div class="form-group">
-                    <label for="media">Change photo</label>
+                    </p>
 
-                    <input style="margin-left:110px" type="file" id="userFile" accept="images" capture="camcorder" name="image"required>
+                        <div class="form-group">
+                            <label for="image">Change photo</label>
+                            <input style="margin-left:110px" type="file" id="userFile" accept="images" capture="camcorder" name="image">
+                        </div>
+                </center>
 
-                    <img src='' id='theFile' width="200" id='thePic'/>
+                <div class= "edit_story">
+                    <div class="description" width="200">
+                        <div class="form-group">
+                            <textarea type="text" class="form-control" placeholder="Edit your Description" rows="5" name="profile_desc" ></textarea>
+                        </div>
+                    </div>
                     
+                    <input type="submit" id="submitBtn" class="btn btn-default" value="Save" style="float:right"></input>
+
                 </div>
-            </center>
+            </form>
 
-        
-
-
- <div class= "edit_story">
-
-            <div class="description" width="200">
-                    <textarea type="text" class="form-control" placeholder="Edit your Description" rows="5" name="post_description" ></textarea>
-            </div>
-                            <input type="submit" id="submitBtn" class="btn btn-default" value="Save" style="float:right"></input>
-
- </div>
 
             <div class = "container-fluid">
                 <!-- <div class = "row">

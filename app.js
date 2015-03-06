@@ -27,6 +27,7 @@ var logout = require('./routes/logout');
 var register = require('./routes/register');
 var post = require('./routes/post');
 var edit_profile = require('./routes/edit_profile');
+var update = require('./routes/update');
 
 
 var add = require('./routes/add');
@@ -83,6 +84,8 @@ app.get('/story_3', story_3.view);
 app.get('/story_4', story_4.view);
 app.get('/story_5', story_5.view);
 app.get('/edit_profile', edit_profile.view);
+
+app.post('/update', update.updateProf);
 
 app.get('/post/:id', post.view)
 app.post('/post/:id/delete', post.deletePost);
