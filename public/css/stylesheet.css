@@ -47,16 +47,16 @@ iframe{
 	margin-top: 100px;
 	/*width: 1170px;*/
 	width: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .body_container_profile{
 	margin-top: 100px;
 	/*width: 1170px;*/
 	width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .intro_text, #clockbox{
