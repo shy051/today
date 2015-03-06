@@ -13,7 +13,8 @@ var PostSchema = new Schema({
 	"imgURL": String,
 	"likes": Number,
 	"description": String,
-	"likedBy": [String]
+	"likedBy": [String],
+	"time": String
 });
 
 
