@@ -149,6 +149,7 @@
                 // var likeLength = $(this).closest('.likebox').text().indexOf("L");
                 // var likeCount = parseInt($(this).closest('.likebox').text().substring(0,likeLength));
 
+                var postId = $(this).closest('.post').attr('id');
                 var likeCount = $(this).closest('.likebox').find("#likes").text();
 
                 if($(this).hasClass("liked")){
@@ -157,7 +158,9 @@
 
                     // decrease the like count
                     $(this).closest('.likebox').find("#likes").text(--likeCount);
-
+                    $.post('/unlike', {"id": postId}, function() {
+                        console.log("post got unliked!");
+                     });
                     // do databse stuff
                 }
                 else{
@@ -166,8 +169,9 @@
 
                     // increase the like count
                     $(this).closest('.likebox').find("#likes").text(++likeCount);
-
-                    // do database stuff
+                    $.post('/like', {"id": postId}, function() {
+                        console.log("post got liked");
+                     });
                 }
                 //console.log("likes : " + likeCount);
             });
