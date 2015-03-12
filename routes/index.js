@@ -10,13 +10,8 @@ exports.view = function(req, res){
 			.exec(renderPage);
 
 		function renderPage(err, user){
-			  if(random_num > 0.5){
-			  	res.render("index", { 'user':user });
-			  }
-			  else{
-			  	res.render("index_alternate", { 'user':user });
-			  }
-			//res.render('index',{ 'user':user });
+			
+			res.render('index',{ 'user':user });
 		}
 	}
 	else{
