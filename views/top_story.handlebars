@@ -90,7 +90,7 @@
                         <a href="#" style="color: black"><span style="float:left" class="glyphicon glyphicon-thumbs-up thumb" aria-hidden="true" id="{{id}}"></span></a>
                         <p id="likes" style="display:inline">{{likes}}</p> Likes
                     </div><br>
-                    <h3 class="title">{{title}}</h3>
+                    <h3 class="title" id="posttitle">{{title}}</h3>
                     <font size=4><p class="post-text">{{description}}</p></font>
 
 
@@ -126,7 +126,23 @@
                 var postId = $(this).closest('.post').attr('id');
 
                 var url_call = '/post/'+postId;
-                console.log("url call is " + url_call);
+                // console.log("url call is " + url_call);
+                var json = {
+                    'id': postId
+                }
+                $.get(url_call, json, function(){
+                    window.location.href = url_call;
+                });
+                
+
+            });
+
+            $('.post #posttitle').click(function(e){
+                e.preventDefault();
+                var postId = $(this).closest('.post').attr('id');
+
+                var url_call = '/post/'+postId;
+                // console.log("url call is " + url_call);
                 var json = {
                     'id': postId
                 }

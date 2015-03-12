@@ -51,20 +51,11 @@ function onceClear(err) {
       console.log(to_save_count + ' left to save');
       if(to_save_count <= 0) {
         console.log('DONE');
+        mongoose.connection.close()
         // The script won't terminate until the 
         // connection to the database is closed
       }
     });
-  }
-
-  models.User
-    .find()
-    .remove()
-    .exec(clearMe);
-
-  function clearMe(err){
-    if(err) console.log(err);
-    mongoose.connection.close()
   }
 }
 

@@ -25,6 +25,18 @@ exports.addPost = function(req, res) {
       
 
     var form_data = req.body;
+    var theDate = new Date();
+    var zeroPlace="";
+    var zeroPlaceH="";
+
+    if(theDate.getMinutes() < 10){
+      zeroPlace = "0";
+    }
+
+    if(theDate.getHours() < 10){
+      zeroPlaceH = "0";
+    }
+
 
     models.User.findOne({username : req.session.username}, 'username imgSrc', function(err, user){
       var newPost = new models.Post({
@@ -32,7 +44,8 @@ exports.addPost = function(req, res) {
         "title": form_data.title,
         "profileURL": "#",
         "pImgUrl": user.imgSrc,
-        "date": new Date(),
+        "date": theDate,
+        "time": zeroPlaceH+theDate.getHours() + ":" + zeroPlace+theDate.getMinutes(),
         "location": form_data.location,
         "imgURL": "uploads/"+fileName,
         "likes": "0",

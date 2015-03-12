@@ -9,7 +9,8 @@
 		"likes": "49678",
 		"title": "A win for soccer",
 		"description":"Another win for the USWNT! Next Friday we head to England to compete for the CONCAFF Championship. Send the team some good vibes.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "1:41"
 	},
 	{
 		"name": "Lindsey Gucci",
@@ -21,7 +22,8 @@
 		"likes": "69678",
 		"title": "Third World Gaming", 
 		"description":"I witnessed children playing with toys that didn't require the use of electricty or WIFI. These kids certainly know how to have a good time without much materials.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "2:31"
 	},
 	{
 		"name": "Brandon Smith",
@@ -33,7 +35,8 @@
 		"likes": "53678",
 		"title": "Tomato Festival",
 		"description":"I was in Spain today, and was able to participate in the tomato festival. It was both fun and scary! I still taste the tomato in my mouth.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "2:34"
 	},
 	{
 		"name": "Carrie Wilson",
@@ -45,7 +48,8 @@
 		"likes": "50678",
 		"title": "Los Angeles Marathon",
 		"description":"Although I hate running, I went for a run with my friends at the LA marathon. I completed the 5 miles trek in less than 20 minutes! My personal best time ever.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "6:48"
 	},
 	{
 		"name": "Jim Choo",
@@ -57,7 +61,8 @@
 		"likes": "42678",
 		"title": "Android Robots",
 		"description":"I was able to fly to Tokyo to catch the testing of the new androids! It was cool to see the scientific advancements but also super weird to see the robots looked like people.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "8:23"
 	},
 	{
 		"name": "Julie Johnson",
@@ -69,7 +74,8 @@
 		"likes": "32678",
 		"title": "Christchurch Earthquake",
 		"description":"New Zealand experienced a large earthquake while I was visiting for an away game. Send love to New Zealand.",
-		"likedBy": []
+		"likedBy": [],
+		"time": "10:48"
 	}
 
 ]
